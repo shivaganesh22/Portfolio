@@ -15,7 +15,7 @@ const PROJECTS_DATA = {
       liveUrl: "https://rsgmovies.com",
       liveBackendUrl: "https://rsg-movies.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/rsgmovies",
-      whatItHas: "A production-grade, distributed media aggregation and streaming platform engineered for multi-screen consumption across Web, Mobile, and living room Android TVs. Features custom real-time scraping engines that aggregate, parse, and proxy high-definition streams and magnet links from Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, and MovierulzHD. Incorporates cloud-based torrent transcoding via the Seedr REST API with multi-resolution playback and an integrated YouTube video downloader. Engineered with a dedicated Android TV Leanback application featuring 10-foot spatial D-pad navigation, Leanback focus management, and ExoPlayer hardware decoding, paired with a real-time Node.js background worker broadcasting instant release updates via Firebase Cloud Messaging (FCM).",
+      whatItHas: "Multi-platform streaming ecosystem for web, mobile, and Android TV. Real-time scrapers aggregate and proxy HD streams and magnet links from Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, and MovierulzHD; Seedr handles cloud torrent transcoding, with multi-resolution playback and YouTube downloads. Android TV uses Leanback/D-pad navigation and ExoPlayer; a Node.js worker sends release alerts through Firebase Cloud Messaging.",
       keyFeatures: [
         { title: "Multi-Source Scraping & Stream Proxy", desc: "Automated resilient scrapers aggregating streams and magnet links from Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, and MovierulzHD with HMAC-signed backend stream proxying." },
         { title: "Android TV 10-Foot Spatial UI", desc: "Dedicated Android TV application built with the AndroidX Leanback library, custom spatial D-pad remote focus handlers, and ExoPlayer hardware video acceleration." },
@@ -32,7 +32,7 @@ const PROJECTS_DATA = {
       subtitle: "Django 5 · Meta Graph API v26.0 · Webhooks · HMAC-SHA256 · Alpine.js · Tailwind CSS",
       liveUrl: "https://rsgflow.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/Auto-Send",
-      whatItHas: "An enterprise-grade social automation SaaS designed to capture lead engagement on Instagram in real time. Listens for incoming public comments via Meta Graph API v26.0 webhooks with SHA-256 HMAC cryptographic signature validation. Employs an idempotent dispatch engine that tracks comment IDs to guarantee zero duplicate messages, executes automated follower verification gating before unlocking private download resources, and delivers instantaneous contextual direct messages (DMs) and public comment replies. Includes an interactive analytics dashboard tracking API latency, delivery rates, and exportable audit logs.",
+      whatItHas: "Instagram engagement automation using Meta Graph API v26.0 webhooks and SHA-256 HMAC validation. Idempotent comment tracking prevents duplicate dispatches; follower verification gates private downloads before contextual DMs and public replies are sent. An analytics dashboard reports API latency and delivery rates, with exportable audit logs.",
       keyFeatures: [
         { title: "Real-Time Webhook Verification", desc: "Ingests live Instagram comment payloads with SHA-256 HMAC challenge validation and automated token renewal." },
         { title: "Zero-Duplicate Idempotency Engine", desc: "Prevents duplicate outreach through strict transactional database locks on incoming comment_id records." },
@@ -50,7 +50,7 @@ const PROJECTS_DATA = {
       liveUrl: "https://rsgtracker.vercel.app",
       liveBackendUrl: "https://rsg-price.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/price-tracker",
-      whatItHas: "A distributed e-commerce price monitoring platform tracking live product pricing, discounts, and historical deal fluctuations across Amazon and Flipkart. Features independent production microservices deployed on Vercel: a responsive ReactJS 18 client-side analytics interface and a high-throughput Django REST Framework backend API. Automatically tracks price changes and triggers personalized real-time alerts via email and push notifications when products hit user-defined price minimums.",
+      whatItHas: "Tracks live prices, discounts, and historical trends across Amazon and Flipkart. Separate Vercel deployments host a React 18 analytics interface and Django REST API; user-defined price thresholds trigger personalized email and push alerts.",
       keyFeatures: [
         { title: "Automated Price Scraping Engine", desc: "Resilient web scraping pipelines continuously capturing product price trends, deal percentages, and historical minimums." },
         { title: "Personalized Threshold Triggering", desc: "User-configured alert thresholds that trigger automated email and app notifications whenever a target price is reached." },
@@ -67,7 +67,7 @@ const PROJECTS_DATA = {
       liveUrl: "https://aupulse-api.vercel.app",
       liveBackendUrl: "https://aupulse-cv.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/mini-project",
-      whatItHas: "An end-to-end automated academic attendance management platform integrating classroom CCTV camera feeds with real-time biometric face recognition. Eliminates manual roll-call overhead and proxy attendance by matching live video frames against enrolled student facial embeddings. Dynamically maps student presence against academic timetables, room schedules, and faculty subject models, providing a cross-platform Flutter mobile client for real-time presence tracking and an administrative dashboard for attendance shortage analytics.",
+      whatItHas: "Academic attendance platform combining CCTV feeds with real-time face matching against enrolled student embeddings. Maps attendance to timetables, rooms, and faculty subjects, with a Flutter app for presence tracking and an admin dashboard for shortage analytics.",
       keyFeatures: [
         { title: "CCTV Biometric Recognition", desc: "OpenCV and deep facial feature extraction pipeline analyzing video streams to mark attendance in real time." },
         { title: "Anti-Proxy Timetable Sync", desc: "Matches detected student identities directly against scheduled class timetables and room assignments to prevent fraudulent roll-call." },
@@ -83,7 +83,7 @@ const PROJECTS_DATA = {
       subtitle: "PyTorch · ResNet / EfficientNet / MobileNet · Perceptual Hashing · AIMLA 2025",
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/major-project",
-      whatItHas: "Published machine learning research presented at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025, Paper ID #455). Formulates a hybrid feature extraction architecture coupling deep convolutional embeddings from pretrained ResNet, EfficientNet, and MobileNet models with perceptual hashing algorithms (pHash, dHash). Detects duplicate, cropped, resized, and color-filtered media at scale with high precision, displaying similarity percentages, compute resource usage, and storage savings metrics to dramatically cut cloud media storage expenses.",
+      whatItHas: "AIMLA 2025 research paper (#455) combining pretrained ResNet, EfficientNet, and MobileNet embeddings with pHash/dHash. Detects duplicate, cropped, resized, and color-filtered images; reports similarity, compute use, and storage savings to support cloud cost reduction.",
       keyFeatures: [
         { title: "Hybrid Deep Embeddings + Hashing", desc: "Combines deep convolutional neural representations with fast perceptual hash hamming distance metrics for real-time duplicate detection." },
         { title: "Storage & Cost Reduction", desc: "Flags redundant visual assets across cloud repositories, reducing multi-terabyte storage footprints and bandwidth overhead." },
@@ -99,7 +99,7 @@ const PROJECTS_DATA = {
       title: "Admission Management System - AMS (Django)",
       category: "web_mobile",
       badge: "Web Counseling & Admission Portal",
-      desc: "Web-based engineering counseling and college seat allocation platform developed as a modernized, error-free alternative to traditional state EAMCET counseling portals. Traditional portals require candidates to manually cross-reference complex tables and manually enter code numbers, frequently resulting in mistaken college selections. AMS replaces this with dynamic dropdown selectors allowing candidates to submit prioritized college and branch choice lists (CSE, IT, ECE, EEE, CIV, MEC) based on entrance rank. Colleges receive instant application notifications with full student profiles to evaluate, approve, or reject seat allocations. Automated SMTP email triggers immediately dispatch official allotment letters to the student's registered email with college code, branch, and tuition fee details upon approval (or status alerts upon rejection), while a super-admin console oversees institutional capacity and overall allocation rounds.",
+      desc: "EAMCET counseling and seat-allocation portal where candidates rank colleges and branches (CSE, IT, ECE, EEE, CIV, MEC) by entrance rank. Colleges review applicant profiles and approve or reject allocations; SMTP emails deliver allotment letters or status alerts. A super-admin console manages capacity and allocation rounds.",
       tech: ["Django", "Python", "SMTP Email Dispatch", "Role-Based Auth", "SQLite", "PythonAnywhere"],
       liveUrl: "https://amsproject00.pythonanywhere.com",
       githubUrl: "https://github.com/shivaganesh22/amsproject"

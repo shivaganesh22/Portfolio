@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shivaganesh.net/sitemap.xml

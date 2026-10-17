@@ -4,13 +4,10 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initParticleCanvas();
-  initDecipherAnimation();
   initStatsCounter();
-  init3DTilt();
   initNavScroll();
-  initSoundToggle();
   initMobileNav();
+  initPortfolioEffects();
 });
 
 /* ==========================================================================
@@ -335,12 +332,47 @@ function initMobileNav() {
 
   toggle.addEventListener('click', () => {
     window.soundEngine?.playClick();
-    linksWrap.classList.toggle('open');
+    const isOpen = linksWrap.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 
   linksWrap.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       linksWrap.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   });
+}
+
+/* Subtle reveal and pointer-light interactions for a more considered finish. */
+function initPortfolioEffects() {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealItems = document.querySelectorAll('.section-header, .flagship-card, .skill-category-card, .project-card, .credential-card, .timeline-card');
+
+  if (!reducedMotion && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+
+    revealItems.forEach((item, index) => {
+      item.classList.add('reveal-ready');
+      item.style.transitionDelay = `${Math.min(index % 4, 3) * 55}ms`;
+      revealObserver.observe(item);
+    });
+  }
+
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.flagship-card, .skill-category-card, .project-card').forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const bounds = card.getBoundingClientRect();
+        card.style.setProperty('--pointer-x', `${event.clientX - bounds.left}px`);
+        card.style.setProperty('--pointer-y', `${event.clientY - bounds.top}px`);
+      }, { passive: true });
+    });
+  }
 }
