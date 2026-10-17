@@ -116,11 +116,11 @@ function initDecipherAnimation() {
   if (!el) return;
 
   const roles = [
+    "Offensive Security & Reverse Engineering",
     "Enterprise IAM & Identity Security",
     "Multi-Platform Software Developer",
-    "Application Security Researcher",
-    "Python & Django Cloud Architect",
-    "Android TV & Mobile Engineer"
+    "Python, Django & Cloud Systems",
+    "Android TV & Flutter Mobile Engineer"
   ];
 
   const chars = "!<>-_\\/[]{}—=+*^?#01";

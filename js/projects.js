@@ -1,7 +1,7 @@
 /* ==========================================================================
-   SHIVA GANESH PORTFOLIO - ACCURATE PROJECT INVENTORY & ARCHITECTURE
-   Extracted from verified resumes, GitHub repositories, and Vercel deployments.
-   NO raw screenshots: Focused on clean technical architecture, live links, and repos.
+   SHIVA GANESH PORTFOLIO - ACCURATE PROJECT INVENTORY
+   Public & Private Repositories, Live Deployments, Features & Tech Stacks.
+   NO API endpoints/details clutter — Clear explanations of what it has & techstack used.
    ========================================================================== */
 
 const PROJECTS_DATA = {
@@ -9,173 +9,168 @@ const PROJECTS_DATA = {
     {
       id: "rsgmovies",
       category: "web_mobile",
-      badge: "Full-Stack Media Ecosystem",
-      title: "RSGMovies Multi-Platform Streaming Platform",
-      subtitle: "Django REST API · React Web · Android TV · Flutter Mobile",
-      summary: "A distributed streaming and media discovery ecosystem integrating APIs for streaming and downloading. Features upload pipeline to Seedr for cloud streaming in various resolutions, YouTube downloader, torrent searcher, custom D-pad spatial focus on Android TV, HMAC-SHA256 signed backend stream proxying, and QR-based Entra authentication.",
+      badge: "Multi-Platform Media Ecosystem",
+      title: "RSGMovies Distributed Streaming Platform",
+      subtitle: "Django REST API · React Web · Android TV · Flutter Mobile · Seedr Cloud",
       liveUrl: "https://rsg-movies.vercel.app",
-      githubUrl: "https://github.com/shivaganesh22/rsgmovies",
-      endpoints: [
-        "GET /api/movies/feed/ — Aggregated media stream feeds",
-        "POST /api/seedr/upload/ — Stream caching & multi-resolution transcode",
-        "POST /api/tv/auth/qr/init/ — Ephemeral QR session initialization",
-        "POST /api/tv/auth/qr/approve/ — Web biometric approval & token issue"
+      githubUrl: "https://github.com/shivaganesh22/rsgmovies-vite",
+      subRepos: [
+        { label: "React Web (Vite)", url: "https://github.com/shivaganesh22/rsgmovies-vite" },
+        { label: "Android TV App", url: "https://github.com/shivaganesh22/rsgmovies-android-app" },
+        { label: "Django Backend", url: "https://github.com/shivaganesh22/rsgmovies-backend" },
+        { label: "Cloud Scraper (Seedr)", url: "https://github.com/shivaganesh22/seed" },
+        { label: "Flutter Client", url: "https://github.com/shivaganesh22/rsgmovies" },
+        { label: "FCM Push Daemon", url: "https://github.com/shivaganesh22/rsgmovies_fcm" }
       ],
-      highlights: [
-        { title: "Architecture", desc: "Unified Django REST API backend deployed on Vercel powering React Web, Android TV (Leanback), and mobile clients." },
-        { title: "Security & Auth", desc: "QR Entra ID authentication with single-session enforcement (displaced device receives 401 SESSION_REVOKED)." },
-        { title: "Media Engine", desc: "HMAC-SHA256 signed backend stream proxying preventing direct credential exposure or stream tampering." }
+      whatItHas: "A complete distributed media streaming ecosystem engineered for multi-screen consumption (Web, Android TV, and Mobile). Features automated cloud torrent scraping via Seedr, 1080p/4K multi-resolution playback, a built-in YouTube video downloader, automated movie scrapers (TamilMV), HMAC-SHA256 signed stream proxying to protect upstream sources, and a real-time Node.js FCM push notification daemon alerting users when new movies are uploaded.",
+      keyFeatures: [
+        { title: "Android TV 10-Foot UI", desc: "Custom TV UI built with spatial D-pad focus handling, remote navigation, and video player controls optimized for living room displays." },
+        { title: "Cloud Stream Pipeline", desc: "Seedr API integration for remote torrent extraction and cloud transcode, bypassing local client download requirements." },
+        { title: "Automated Push Daemon", desc: "Node.js background cron worker connected to PostgreSQL firing instant Firebase Cloud Messaging (FCM) notifications on releases." }
       ],
-      tech: ["Django REST Framework", "ReactJS", "Flutter", "react-native-tvos", "Seedr API", "Vercel", "PostgreSQL", "HMAC-SHA256"]
-    },
-    {
-      id: "iam-automation",
-      category: "iam_security",
-      badge: "PwC Enterprise Work",
-      title: "Automated Enterprise App Onboarding & IAM Governance",
-      subtitle: "Microsoft Entra ID · Okta · PowerShell / Python · CyberArk PAM",
-      summary: "Engineered automated scripts at PwC to onboard enterprise applications into Microsoft Entra ID and Okta. Automated single sign-on (SSO), SAML 2.0 / OIDC federation, attribute/claims mapping, SCIM / Just-in-Time provisioning, and Conditional Access zero-trust policy enforcement.",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/pwc",
-      endpoints: [
-        "New-EntraAppOnboarding.ps1 — Parameterized enterprise app registration",
-        "Config-ConditionalAccess.ps1 — Zero-trust policy baseline enforcement",
-        "Audit-GroupEntitlements.ps1 — RBAC least-privilege verification"
-      ],
-      highlights: [
-        { title: "Orchestrated Provisioning", desc: "Automates Enterprise Applications, Service Principals, OAuth redirect URIs, and admin roles from input parameters." },
-        { title: "Zero-Trust Enforcement", desc: "Configured Entra Conditional Access policies (Phishing-resistant MFA, sign-in risk, device compliance, location fencing)." },
-        { title: "Privileged Access (PAM)", desc: "CyberArk Vault, PVWA, CPM password rotation, PSM session recording, and CCP programmatic secret injection." }
-      ],
-      tech: ["Microsoft Entra ID", "Okta", "CyberArk PAM", "Delinea Secret Server", "SAML 2.0", "OAuth 2.0 / OIDC", "SCIM", "PowerShell", "Python"]
+      tech: ["Django REST Framework", "ReactJS (Vite)", "Android TV", "Flutter", "Node.js", "Seedr API", "Firebase Cloud Messaging", "PostgreSQL", "Vercel", "HMAC-SHA256"]
     },
     {
       id: "auto-send",
       category: "web_mobile",
-      badge: "SaaS Webhook Platform",
+      badge: "SaaS Webhook Automation",
       title: "Auto-Send: Instagram Comment & DM Automation SaaS",
-      subtitle: "Django 5 · Meta Graph API v26.0 · Alpine.js · Tailwind · Chart.js",
-      summary: "A production-grade social automation SaaS delivering automated comment replies and private direct messages via Meta Graph API v26.0. Built with SHA-256 HMAC webhook verification, comment deduplication by ID, follower gating, and real-time latency analytics.",
+      subtitle: "Django 5 · Meta Graph API v26.0 · Webhooks · Alpine.js · Tailwind",
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/Auto-Send",
-      endpoints: [
-        "POST /webhooks/instagram/ — SHA-256 HMAC verified event challenge handler",
-        "GET /api/graph/inspect/ — Meta Graph API payload and round-trip latency inspector",
-        "POST /automation/rules/ — Rule engine dispatcher with follower gating verification"
+      subRepos: [],
+      whatItHas: "A production-grade social automation SaaS that monitors incoming Instagram comments in real time via Meta Graph API v26.0 webhooks. When users trigger specific keywords, the platform automatically dispatches contextual public replies and private DMs with download links or resources. Built with SHA-256 HMAC webhook verification, comment deduplication by ID to prevent duplicate messages, follower gating (verifies the user is following before delivering bonuses), and built-in latency analytics.",
+      keyFeatures: [
+        { title: "Zero-Duplicate Idempotency", desc: "Strict comment_id tracking with SHA-256 HMAC challenge validation ensures each user receives exactly one response." },
+        { title: "Follower Gating Pipeline", desc: "Automated API check verifying account follow status before unlocking private resources or bonus downloads." },
+        { title: "Real-time Metrics Dashboard", desc: "Built with Chart.js and Alpine.js tracking API response times, dispatch success rates, and exportable CSV audit logs." }
       ],
-      highlights: [
-        { title: "Idempotency Pipeline", desc: "Webhook challenge verification with strict comment_id deduplication to prevent duplicate message dispatches." },
-        { title: "Follower Gating", desc: "Verifies account follower state via Meta Graph API before dispatching private links or bonus downloads." },
-        { title: "Observability", desc: "Built-in request inspector tracking response latency, status codes, payload dumps, and CSV activity exports." }
-      ],
-      tech: ["Django 5", "Meta Graph API v26.0", "Webhooks", "HMAC-SHA256", "Alpine.js", "Chart.js", "Tailwind CSS"]
+      tech: ["Django 5", "Python", "Meta Graph API v26.0", "Webhooks", "HMAC-SHA256", "Alpine.js", "Chart.js", "Tailwind CSS"]
     },
     {
       id: "deduplication",
       category: "ai_ml",
       badge: "Published Research · AIMLA 2025 Paper #455",
       title: "Hybrid ML Model for Image Deduplication & Storage Optimization",
-      subtitle: "Pretrained Deep Learning · ResNet / EfficientNet / MobileNet · AIMLA 2025",
-      summary: "Published research presented at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025). Formulates a hybrid feature extraction and perceptual hashing architecture to detect near-duplicate and modified visual media at scale.",
+      subtitle: "PyTorch · ResNet / EfficientNet / MobileNet · Perceptual Hashing · AIMLA 2025",
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/deduplication",
-      endpoints: [
-        "POST /api/dedup/analyze/ — Deep CNN feature vector extraction & cosine clustering",
-        "POST /api/dedup/hash/ — Perceptual Hamming distance candidate matching",
-        "GET /api/dedup/metrics/ — Latency, memory footprint, and storage reduction report"
+      subRepos: [],
+      whatItHas: "Published machine learning research presented at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025, Paper ID #455). Formulates a hybrid feature extraction and perceptual hashing architecture to detect near-duplicate, cropped, resized, or filtered visual media at scale, significantly reducing redundant cloud storage consumption.",
+      keyFeatures: [
+        { title: "AIMLA 2025 Paper #455", desc: "Co-authored and published conference paper on hybrid deep learning models for enterprise image deduplication." },
+        { title: "Hybrid Feature Extraction", desc: "Combines deep embeddings from ResNet, EfficientNet, and MobileNet with fast perceptual hashing (dHash/pHash) for optimal accuracy and speed." },
+        { title: "Storage Savings", desc: "Dramatically cuts redundant storage footprints across cloud media archives by detecting duplicate images even through post-processing modifications." }
       ],
-      highlights: [
-        { title: "AIMLA 2025 Paper #455", desc: "Co-authored and published conference paper on hybrid machine learning for image deduplication." },
-        { title: "Deep Feature Extraction", desc: "Benchmarked embeddings from ResNet, EfficientNet, and MobileNet against traditional perceptual hashing (dHash/pHash)." },
-        { title: "Storage Savings", desc: "Eliminates duplicate visual media in large-scale cloud repositories to minimize redundant storage costs." }
+      tech: ["PyTorch", "TensorFlow", "ResNet", "EfficientNet", "MobileNet", "OpenCV", "Perceptual Hashing (pHash)", "Django"]
+    },
+    {
+      id: "fixitnow",
+      category: "web_mobile",
+      badge: "Cross-Platform Mobile App",
+      title: "FixItNow: Civic Grievance & Community Complaint App",
+      subtitle: "Flutter · Dart · REST API · Video Evidence · Push Notifications",
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/fixitnow-app",
+      subRepos: [],
+      whatItHas: "A cross-platform mobile application built in Flutter enabling citizens and communities to report public grievances and infrastructure issues. Users can lodge complaints with photo and video evidence, track resolution progress through a live status pipeline, comment and upvote issues in their locality, and receive instant push notifications as municipal authorities update ticket stages.",
+      keyFeatures: [
+        { title: "Multimedia Evidence Upload", desc: "Integrated camera and video player allowing citizens to capture and submit verifiable evidence directly with complaint tickets." },
+        { title: "Real-Time Ticket Tracking", desc: "Live status updates from submission through verification, resolution, and closure with transparent audit logs." },
+        { title: "Community Interaction", desc: "Social discussion module enabling neighbors to upvote, comment on, and highlight priority civic matters." }
       ],
-      tech: ["PyTorch", "TensorFlow", "ResNet", "EfficientNet", "MobileNet", "OpenCV", "AIMLA 2025", "Django"]
+      tech: ["Flutter", "Dart", "REST API", "Video Player", "Push Notifications", "Local Storage", "Cross-Platform Mobile"]
     },
     {
       id: "aupulse-app",
       category: "web_mobile",
       badge: "Computer Vision & Mobile",
-      title: "AUpulse Attendance Management System",
-      subtitle: "Flutter Mobile App + Django REST API + CCTV Facial Recognition",
-      summary: "An automated attendance-management system linked with CCTV and class timetables. Eliminates human effort and prevents proxy attendance by marking students present based on real-time facial recognition data, complete with institutional administration and reporting.",
+      title: "AUpulse Automated Attendance Management System",
+      subtitle: "Flutter Mobile App + OpenCV CCTV Facial Recognition + Django REST",
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/aupulse_app",
-      endpoints: [
-        "POST /api/attendance/mark/ — CCTV biometric stream face matching & verification",
-        "GET /api/attendance/reports/ — Department-level timetable and presence analytics",
-        "POST /api/academic/structure/ — Semester, section, and student enrollment sync"
+      subRepos: [
+        { label: "Flutter Client", url: "https://github.com/shivaganesh22/aupulse_app" },
+        { label: "Computer Vision Engine", url: "https://github.com/shivaganesh22/aupulse_cv" },
+        { label: "Backend Core", url: "https://github.com/shivaganesh22/aupulse-miniproject" }
       ],
-      highlights: [
-        { title: "Biometric Attendance", desc: "CCTV facial recognition pipeline validating classroom presence against timetabled section rosters." },
-        { title: "Proxy Prevention", desc: "Tamper-proof real-time facial landmark logging eliminating manual roll-call and paper proxies." },
-        { title: "Mobile & Admin Portal", desc: "Flutter client for student presence visibility paired with Django API for administration." }
+      whatItHas: "An end-to-end automated attendance management platform integrated with classroom CCTV cameras and academic timetables. The system matches video streams against enrolled student facial embeddings in real time and automatically records attendance, completely eliminating manual roll-call and proxy attendance.",
+      keyFeatures: [
+        { title: "Real-Time Face Matching", desc: "CCTV facial recognition pipeline matching classroom video feeds against enrolled student biometric profiles." },
+        { title: "Proxy-Proof Attendance", desc: "Tamper-resistant automated logging matched directly against class schedules and room timetables." },
+        { title: "Mobile Student Portal", desc: "Flutter mobile client allowing students and faculty to review real-time presence percentages, analytics, and shortage warnings." }
       ],
-      tech: ["Flutter / Dart", "Django REST API", "OpenCV", "Facial Recognition", "MySQL", "PostgreSQL"]
+      tech: ["Flutter / Dart", "OpenCV", "Face Recognition", "Django REST API", "Python", "PostgreSQL"]
     },
     {
       id: "applock",
       category: "ai_ml",
-      badge: "Biometric & Hardware Auth",
-      title: "AppLock: ML Multi-Factor Biometric Authentication",
-      subtitle: "MediaPipe 468 Face Landmarks · Hand Gesture RF · WebAuthn / FIDO2",
-      summary: "An alternative multi-factor authentication framework enabling enrollment and verification via 468 MediaPipe 3D face landmarks evaluated by an SVM (RBF kernel), 21 hand joint angles evaluated by Random Forest, and WebAuthn hardware security keys.",
+      badge: "Biometrics & Hardware Auth",
+      title: "AppLock: ML Multi-Factor Biometric Security Authenticator",
+      subtitle: "MediaPipe 468 Face Landmarks · Hand Gesture Random Forest · WebAuthn / FIDO2",
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/applock",
-      endpoints: [
-        "POST /auth/face/verify/ — 468 MediaPipe landmark distance vector evaluation via SVM",
-        "POST /auth/gesture/verify/ — Hand joint angles and curl classification via Random Forest",
-        "POST /auth/webauthn/assertion/ — Cryptographic origin challenge validation"
+      subRepos: [],
+      whatItHas: "An advanced multi-modal biometric security gateway providing alternative authentication methods beyond standard passwords. Evaluates 468 3D facial mesh landmarks with an RBF-kernel SVM, classifies 21 hand joint angles and curl gestures via Random Forest, and enforces physical possession through WebAuthn/FIDO2 hardware security keys.",
+      keyFeatures: [
+        { title: "468 3D Facial Mesh", desc: "Real-time facial geometry extraction via MediaPipe normalized into geometric distance vectors and classified using scikit-learn SVM." },
+        { title: "Hand Gesture Recognition", desc: "21 hand joint angles and curl characteristics evaluated by a trained Random Forest model for touchless gesture unlocking." },
+        { title: "Hardware Security FIDO2", desc: "Cryptographic origin challenge validation enforcing physical possession via WebAuthn security keys." }
       ],
-      highlights: [
-        { title: "468 Face Landmarks", desc: "Real-time MediaPipe facial mesh with normalized geometric vectors fed into scikit-learn SVM." },
-        { title: "Hand Gesture RF", desc: "21 hand joint angles and curl characteristics evaluated by Random Forest." },
-        { title: "FIDO2 / WebAuthn", desc: "Hardware security key challenge-response protocol enforcing physical possession." }
+      tech: ["MediaPipe", "Scikit-Learn (SVM & RF)", "WebAuthn / FIDO2", "Flask", "OpenCV", "Python"]
+    },
+    {
+      id: "iam-automation",
+      category: "iam_security",
+      badge: "Enterprise IAM Work (PwC)",
+      title: "Automated Enterprise App Onboarding & IAM Governance",
+      subtitle: "Microsoft Entra ID · Okta · PowerShell / Python · CyberArk PAM",
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/pwc",
+      subRepos: [],
+      whatItHas: "Enterprise automation scripts and toolkits developed at PwC for streamlined application onboarding into Microsoft Entra ID and Okta. Automates Single Sign-On (SSO) configuration, SAML 2.0 and OIDC federation, attribute/claims mapping, SCIM user lifecycle provisioning, and CyberArk privileged account password management.",
+      keyFeatures: [
+        { title: "Automated Onboarding", desc: "Scripted provisioning of Enterprise Applications, Service Principals, OAuth redirect URIs, and claims mappings." },
+        { title: "SSO & Identity Federation", desc: "Configured SAML 2.0 assertions and OIDC ID/Access tokens for seamless, centralized authentication across enterprise apps." },
+        { title: "Privileged Access (PAM)", desc: "Integrated CyberArk Vault, PVWA, CPM automated password rotation, and PSM session recording for privileged infrastructure access." }
       ],
-      tech: ["MediaPipe", "scikit-learn (SVM/RF)", "WebAuthn / FIDO2", "Flask", "OpenCV", "SQLAlchemy"]
+      tech: ["Microsoft Entra ID", "Okta", "CyberArk PAM", "PowerShell", "Python", "SAML 2.0", "OAuth 2.0 / OIDC", "SCIM"]
     }
   ],
+
   supporting: [
+    {
+      title: "Cinemate: TMDB Movie Discovery Web App",
+      category: "web_mobile",
+      badge: "React Web App",
+      desc: "Dynamic movie exploration platform consuming the TMDB API. Features Now Playing, Top Rated, and Upcoming movie feeds, real-time search, movie details, and dark/light theme switching.",
+      tech: ["ReactJS", "Tailwind CSS", "TMDB API", "JavaScript", "Netlify"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/cinemate"
+    },
     {
       title: "Ecommerce Platform with QR Fraud Prevention",
       category: "web_mobile",
       badge: "Live on PythonAnywhere",
-      desc: "Full-scale Django e-commerce platform featuring cryptographic QR code generation for every order. Used for return verification and anti-counterfeiting.",
-      tech: ["Django", "Python", "QR Cryptography", "SQLite"],
+      desc: "Full-scale Django e-commerce platform generating unique cryptographic QR codes for every order invoice to verify returns and combat warranty fraud.",
+      tech: ["Django", "Python", "QR Cryptography", "SQLite", "PythonAnywhere"],
       liveUrl: "https://ecommerce0.pythonanywhere.com",
       githubUrl: "https://github.com/shivaganesh22/ecommerce"
     },
     {
-      title: "Smart Farming Assistant",
-      category: "ai_ml",
-      badge: "Django Platform",
-      desc: "Smart agriculture platform offering machine learning crop and fertilizer recommendations, weather forecasts, government scheme information, and an online crop marketplace.",
-      tech: ["Django", "scikit-learn", "Weather API", "NumPy"],
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/farming"
-    },
-    {
-      title: "Complaint Management System (CMS)",
+      title: "Blast: High-Throughput Notification Dispatcher",
       category: "web_mobile",
-      badge: "Native Android",
-      desc: "Android application in Java designed for government schools. Enables students to submit complaints and provides monitoring teams with real-time verification and chat.",
-      tech: ["Android Java", "REST API", "Push Notifications", "MySQL"],
+      badge: "Node.js Serverless",
+      desc: "Serverless Node.js event gateway proxying high-speed automated notifications and alerts with Bearer token authentication, custom header rotation, and CORS handling.",
+      tech: ["Node.js", "Express", "Axios", "Serverless-HTTP", "CORS"],
       liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/cms"
-    },
-    {
-      title: "Aadhar-Linked Voter Card System",
-      category: "web_mobile",
-      badge: "Django Security",
-      desc: "Secure system for registering and updating voter cards linked to Aadhar to eliminate duplication and ensure verifiable electoral records.",
-      tech: ["Django", "Python", "Identity Verification", "SQLite"],
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/voter"
+      githubUrl: "https://github.com/shivaganesh22/blast"
     },
     {
       title: "Placement Management System (PMS)",
       category: "web_mobile",
       badge: "Live on PythonAnywhere",
-      desc: "Institutional placement workflow portal in Django. Handles company drives, eligibility tracking, student interview scheduling, and placement analytics.",
+      desc: "Institutional placement workflow portal managing corporate recruitment drives, applicant eligibility filters, multi-round interview tracking, and offer metrics.",
       tech: ["Django", "Bootstrap", "Role-Based Auth", "PythonAnywhere"],
       liveUrl: "https://pms0.pythonanywhere.com/",
       githubUrl: "https://github.com/shivaganesh22/pms"
@@ -184,51 +179,97 @@ const PROJECTS_DATA = {
       title: "Admission Management System (AMS)",
       category: "web_mobile",
       badge: "Live on PythonAnywhere",
-      desc: "Workflow automation system in Django managing applicant processing, document verification, merit list calculations, and department allotments.",
-      tech: ["Django", "Python", "Workflow Engine"],
+      desc: "Automated student admission portal handling application intake, document verification workflows, automated merit list calculations, and department allotment tracking.",
+      tech: ["Django", "Python", "Workflow Engine", "PythonAnywhere"],
       liveUrl: "https://amsproject00.pythonanywhere.com",
       githubUrl: "https://github.com/shivaganesh22/amsproject"
     },
     {
-      title: "Price Tracker Distributed Application",
+      title: "Price Tracker: Distributed E-Commerce Monitor",
       category: "web_mobile",
-      badge: "React + Django",
-      desc: "Distributed price tracking monitor pairing a React 18 frontend with a scalable Django REST backend and Firebase integration for real-time price alerts.",
-      tech: ["React 18", "Django REST", "Firebase", "Tailwind CSS"],
+      badge: "React 18 + Django REST",
+      desc: "Distributed price tracking tool combining a React 18 frontend with a scalable Django REST backend and Firebase integration to monitor product prices and trigger alerts.",
+      tech: ["React 18", "Django REST Framework", "Firebase", "Tailwind CSS"],
       liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/pricetracker-frontend"
+      githubUrl: "https://github.com/shivaganesh22/pricetracker-frontend",
+      backendUrl: "https://github.com/shivaganesh22/pricetracker-backend"
     },
     {
-      title: "Parkinson's Audio Speech ML Classifier",
+      title: "Smart Farming Assistant",
       category: "ai_ml",
-      badge: "Acoustic ML",
-      desc: "Acoustic signal processing tool extracting vocal jitter, shimmer, and spectral features using Librosa and FFmpeg, feeding XGBoost classifiers for acoustic pattern research.",
-      tech: ["Librosa", "XGBoost", "FFmpeg", "scikit-learn", "Django"],
+      badge: "Django + ML Platform",
+      desc: "Precision agriculture advisor delivering ML-driven crop and fertilizer suggestions based on soil NPK values and climate, integrated weather forecasts, and crop marketplace.",
+      tech: ["Django", "Scikit-Learn", "Weather API", "NumPy", "Bootstrap"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/farming"
+    },
+    {
+      title: "Aadhar-Linked Secure Voter Registration",
+      category: "iam_security",
+      badge: "Django Identity Security",
+      desc: "Secure electoral registration and verification system cross-validating voter cards with Aadhar records to eliminate fraudulent registrations and ensure clean electoral rolls.",
+      tech: ["Django", "Python", "Identity Verification", "SQLite"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/voter"
+    },
+    {
+      title: "Complaint Management System (CMS)",
+      category: "web_mobile",
+      badge: "Native Android App",
+      desc: "Native Android mobile app built for government schools. Enables students to submit complaints and provides administrative monitoring teams with real-time status tracking.",
+      tech: ["Android SDK", "Java", "REST API", "Push Notifications", "MySQL"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/cms"
+    },
+    {
+      title: "Parkinson's Speech ML Acoustic Classifier",
+      category: "ai_ml",
+      badge: "Acoustic Signal Processing",
+      desc: "Biomedical audio analysis pipeline extracting vocal jitter, shimmer, pitch perturbation, and MFCCs using Librosa and FFmpeg, feeding XGBoost classifiers for vocal pattern research.",
+      tech: ["Librosa", "FFmpeg", "XGBoost", "Scikit-Learn", "Django"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/parkinson"
     },
     {
-      title: "ProctorVault Remote Exam Guardian",
+      title: "ProctorVault Remote Exam Integrity Guardian",
       category: "iam_security",
       badge: "Session Security",
-      desc: "Django-based examination integrity platform implementing secure session handling, candidate verification, and tamper-resistant audit logging.",
+      desc: "Remote exam integrity platform featuring browser lockdown controls, tab-switch event monitoring, candidate identity checks, and immutable session audit logging.",
       tech: ["Django", "Python", "Session Security", "Audit Logs"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/proctorvault"
     },
     {
-      title: "College Management GUI Suite",
+      title: "College Management Desktop GUI Suite",
       category: "web_mobile",
-      badge: "Desktop Python",
-      desc: "Desktop administrative suite created with Python and Tkinter providing student records, fee tracking, and department management menus.",
+      badge: "Desktop Python Application",
+      desc: "Desktop administrative software created with Python and Tkinter providing student records, fee tracking, faculty schedules, and department management menus.",
       tech: ["Python", "Tkinter GUI", "SQLite"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/college-manage-system-gui"
+    },
+    {
+      title: "Streamlit Interactive Data Explorer",
+      category: "ai_ml",
+      badge: "Streamlit App",
+      desc: "Interactive data visualization dashboard built with Streamlit and Pandas for exploring multivariate datasets, running statistical models, and generating real-time charts.",
+      tech: ["Python", "Streamlit", "Pandas", "Matplotlib"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/streamlit"
+    },
+    {
+      title: "SVS Academic Projects Web Portal",
+      category: "web_mobile",
+      badge: "Web Application",
+      desc: "Web portal for showcasing and archiving engineering academic projects, documentation, source repositories, and demonstration deliverables.",
+      tech: ["HTML5", "CSS3", "JavaScript", "PHP / MySQL"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/svsprojects"
     }
   ]
 };
 
-// Render Flagship Projects (NO raw screenshots, sleek technical architecture cards)
+// Render Flagship Projects (Clean cards: What it has, Key Capabilities, Tech Stack, Live & Repo links)
 function renderFlagshipProjects() {
   const container = document.getElementById('flagship-list-container');
   if (!container) return;
@@ -260,11 +301,33 @@ function renderFlagshipProjects() {
         </div>
 
         <h3 class="flagship-title">${p.title}</h3>
-        <p class="flagship-summary">${p.summary}</p>
+
+        <!-- What the Project Has Section -->
+        <div class="flagship-what-box">
+          <div class="box-section-heading">
+            <span class="mono text-cyan" style="font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;">// WHAT THIS PROJECT HAS & DELIVERS</span>
+          </div>
+          <p class="flagship-what-text">${p.whatItHas}</p>
+        </div>
+
+        <!-- Sub-repositories (if multi-repo ecosystem) -->
+        ${p.subRepos && p.subRepos.length ? `
+          <div class="sub-repos-strip">
+            <span class="sub-repo-label mono">Ecosystem Repositories:</span>
+            <div class="sub-repo-pills">
+              ${p.subRepos.map(sr => `
+                <a href="${sr.url}" target="_blank" rel="noopener" class="sub-repo-pill" onclick="window.soundEngine?.playClick()">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>${sr.label}</span>
+                </a>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
 
         <!-- Technical Highlights Grid -->
         <div class="flagship-highlights-grid">
-          ${p.highlights.map(h => `
+          ${p.keyFeatures.map(h => `
             <div class="highlight-box">
               <div class="highlight-title">${h.title}</div>
               <div class="highlight-desc">${h.desc}</div>
@@ -272,21 +335,12 @@ function renderFlagshipProjects() {
           `).join('')}
         </div>
 
-        <!-- Terminal Architecture Endpoints Strip -->
-        ${p.endpoints && p.endpoints.length ? `
-          <div class="endpoints-box">
-            <div class="endpoints-header">
-              <span class="mono text-cyan" style="font-size:0.75rem;">// CORE ARCHITECTURE & API CONTRACTS</span>
-            </div>
-            <div class="endpoints-list mono">
-              ${p.endpoints.map(e => `<div>${e}</div>`).join('')}
-            </div>
+        <!-- Tech Stack Used -->
+        <div class="flagship-tech-block">
+          <span class="tech-block-title mono">// TECH STACK USED:</span>
+          <div class="flagship-tags-wrap">
+            ${p.tech.map(t => `<span class="tech-chip">#${t}</span>`).join('')}
           </div>
-        ` : ''}
-
-        <!-- Stack Tag Pills -->
-        <div class="flagship-tags-wrap">
-          ${p.tech.map(t => `<span class="tech-chip">#${t}</span>`).join('')}
         </div>
       </div>
     </article>
@@ -335,10 +389,16 @@ function renderSupportingProjects(filter = 'all', searchQuery = '') {
               GitHub ↗
             </a>
           ` : ''}
+          ${p.backendUrl ? `
+            <a href="${p.backendUrl}" target="_blank" rel="noopener" class="link-badge-repo" title="Backend Repository" onclick="window.soundEngine?.playClick()">
+              Backend ↗
+            </a>
+          ` : ''}
         </div>
       </div>
       <h3 class="project-title">${p.title}</h3>
       <p class="project-desc">${p.desc}</p>
+      <div class="project-tech-header mono">// TECH STACK:</div>
       <ul class="project-tech-list">
         ${p.tech.map(t => `<li>#${t}</li>`).join('')}
       </ul>

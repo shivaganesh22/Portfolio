@@ -29,18 +29,18 @@ Available system commands:
       `,
       whoami: () => `
 <strong>Dornala Shiva Ganesh</strong>
-Role: Software Developer · Enterprise IAM · Application Security
+Role: Full-Stack Software Developer · Offensive Security & Reverse Eng. · Enterprise IAM
 Education: B.Tech in IT, Anurag University (CGPA: <strong>9.05</strong>)
 Primary Domain: <a href="https://shivaganesh.net" target="_blank" class="text-cyan">shivaganesh.net</a>
-Email: <a href="mailto:dornalashivaganesh0@gmail.com" class="text-cyan">dornalashivaganesh0@gmail.com</a>
-Positioning: Engineering multi-platform software, automating enterprise identity workflows, and testing application security controls.
+Email: <a href="mailto:shivaganeshd22@gmail.com" class="text-cyan">shivaganeshd22@gmail.com</a>
+Expertise: Multi-platform applications, low-level Android reverse engineering, offensive pentesting, and automated enterprise identity governance.
       `,
       experience: () => `
 <strong>Professional Experience:</strong>
 1. <span class="text-cyan">IAM Associate — PwC (Cyber Risk & Regulatory / Access Management)</span> [Aug 2025 - Present]
    - Managed users, groups, roles across Okta and Microsoft Entra ID.
    - Configured Conditional Access (MFA enforcement, sign-in risk, location rules, device compliance).
-   - Created applications using SAML 2.0, OIDC/OAuth, SCIM / JIT provisioning.
+   - Created enterprise applications using SAML 2.0, OIDC/OAuth, SCIM / JIT provisioning.
    - Scripted automated application onboarding into Entra ID.
 2. <span class="text-cyan">IAM Intern — PwC (Privileged Access Management - PAM)</span> [Feb 2025 - Aug 2025]
    - Deployed and configured CyberArk Vault, PVWA, CPM, PSM, HTML5 Gateway.
@@ -49,30 +49,49 @@ Positioning: Engineering multi-platform software, automating enterprise identity
 3. <span class="text-cyan">National Apprenticeship Certificate: Software Programmer (V1)</span> [Score: 94.8%, 40 Credits]
       `,
       projects: () => `
-<strong>Flagship Projects & Live Links:</strong>
-1. <span class="text-cyan">RSGMovies Multi-Platform Ecosystem</span>:
-   - Live: <a href="https://rsg-movies.vercel.app" target="_blank" class="text-emerald">https://rsg-movies.vercel.app</a>
-   - GitHub: <a href="https://github.com/shivaganesh22/rsgmovies" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies</a>
-2. <span class="text-cyan">Auto-Send: Instagram Comment & DM SaaS</span>:
+<strong>Flagship Projects & Live Repository Links:</strong>
+1. <span class="text-cyan">RSGMovies Multi-Platform Streaming Platform</span>:
+   - Live: <a href="https://rsg-movies.vercel.app" target="_blank" class="text-emerald">rsg-movies.vercel.app</a>
+   - React Web: <a href="https://github.com/shivaganesh22/rsgmovies-vite" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies-vite</a>
+   - Android TV: <a href="https://github.com/shivaganesh22/rsgmovies-android-app" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies-android-app</a>
+   - Django Backend: <a href="https://github.com/shivaganesh22/rsgmovies-backend" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies-backend</a>
+   - Seedr Scraper: <a href="https://github.com/shivaganesh22/seed" target="_blank" class="text-cyan">github.com/shivaganesh22/seed</a>
+   - FCM Push Daemon: <a href="https://github.com/shivaganesh22/rsgmovies_fcm" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies_fcm</a>
+2. <span class="text-cyan">Auto-Send: Instagram Comment & DM Automation SaaS</span>:
    - GitHub: <a href="https://github.com/shivaganesh22/Auto-Send" target="_blank" class="text-cyan">github.com/shivaganesh22/Auto-Send</a>
 3. <span class="text-cyan">Hybrid ML Image Deduplication (AIMLA 2025 Paper #455)</span>:
    - GitHub: <a href="https://github.com/shivaganesh22/deduplication" target="_blank" class="text-cyan">github.com/shivaganesh22/deduplication</a>
-4. <span class="text-cyan">AUpulse Attendance (Flutter + Django + CCTV Face Verification)</span>:
-   - GitHub: <a href="https://github.com/shivaganesh22/aupulse_app" target="_blank" class="text-cyan">github.com/shivaganesh22/aupulse_app</a>
-5. <span class="text-cyan">Ecommerce with Anti-Fraud QR Verification</span>:
+4. <span class="text-cyan">FixItNow: Civic Grievance & Complaint Mobile App</span>:
+   - GitHub: <a href="https://github.com/shivaganesh22/fixitnow-app" target="_blank" class="text-cyan">github.com/shivaganesh22/fixitnow-app</a>
+5. <span class="text-cyan">AUpulse Automated Attendance (Flutter + OpenCV Face Matching)</span>:
+   - Mobile: <a href="https://github.com/shivaganesh22/aupulse_app" target="_blank" class="text-cyan">github.com/shivaganesh22/aupulse_app</a>
+   - CV Engine: <a href="https://github.com/shivaganesh22/aupulse_cv" target="_blank" class="text-cyan">github.com/shivaganesh22/aupulse_cv</a>
+6. <span class="text-cyan">Ecommerce with Anti-Fraud QR Verification</span>:
    - Live: <a href="https://ecommerce0.pythonanywhere.com" target="_blank" class="text-emerald">ecommerce0.pythonanywhere.com</a>
    - GitHub: <a href="https://github.com/shivaganesh22/ecommerce" target="_blank" class="text-cyan">github.com/shivaganesh22/ecommerce</a>
-6. <span class="text-cyan">AppLock Multi-Auth (MediaPipe + Random Forest + WebAuthn)</span>:
+7. <span class="text-cyan">AppLock Multi-Biometric Authenticator</span>:
    - GitHub: <a href="https://github.com/shivaganesh22/applock" target="_blank" class="text-cyan">github.com/shivaganesh22/applock</a>
+8. <span class="text-cyan">Cinemate React Movie Discovery</span>:
+   - GitHub: <a href="https://github.com/shivaganesh22/cinemate" target="_blank" class="text-cyan">github.com/shivaganesh22/cinemate</a>
+9. <span class="text-cyan">Placement Management System (PMS)</span>:
+   - Live: <a href="https://pms0.pythonanywhere.com/" target="_blank" class="text-emerald">pms0.pythonanywhere.com</a>
+   - GitHub: <a href="https://github.com/shivaganesh22/pms" target="_blank" class="text-cyan">github.com/shivaganesh22/pms</a>
+10. <span class="text-cyan">Admission Management System (AMS)</span>:
+    - Live: <a href="https://amsproject00.pythonanywhere.com" target="_blank" class="text-emerald">amsproject00.pythonanywhere.com</a>
+    - GitHub: <a href="https://github.com/shivaganesh22/amsproject" target="_blank" class="text-cyan">github.com/shivaganesh22/amsproject</a>
       `,
       skills: () => `
-<strong>Technical Skills Inventory:</strong>
-- <span class="text-cyan">Programming:</span> Python, Java, PHP, HTML, CSS, JavaScript, Dart
-- <span class="text-cyan">Frameworks:</span> Django, Django REST Framework, ReactJS, Flutter, Flask
-- <span class="text-cyan">Databases:</span> MySQL, PostgreSQL, SQLite
-- <span class="text-cyan">IAM & Identity:</span> Microsoft Entra ID, Okta, CyberArk PAM, Delinea Secret Server, SAML 2.0, OIDC, SCIM
-- <span class="text-cyan">Security Tools:</span> Burp Suite, Metasploit, sqlmap, Aircrack-ng, Kali Linux, Frida, Git
-- <span class="text-cyan">AI / ML:</span> PyTorch, TensorFlow, scikit-learn, MediaPipe, OpenCV, Librosa, XGBoost
+<strong>Technical Capabilities & Core Arsenal:</strong>
+- <span class="text-cyan">Offensive Security & Pentesting:</span>
+  Kali Linux, Burp Suite (MitM / Traffic Interception), Hydra (Credential Brute-Forcing), SQL Injection (Manual In-Band / Blind & SQLmap), WiFi Pentesting (Aircrack-ng, Wifite, WPA2 Deauth, Handshake Cracking), Metasploit, Nmap, Wireshark, OWASP Top 10.
+- <span class="text-cyan">Android Internals & Reverse Engineering:</span>
+  Bootloader Unlocking (Fastboot/ADB), Rooting (Magisk, KernelSU, Zygisk), Custom Recovery (TWRP, OrangeFox), Custom ROM Flashing, APK Modding & Smali Instrumentation, SSL Pinning Bypass (Frida / Objection / JustTrustMe), App Binning & Free Trial Bypasses, Payment Logic Analysis.
+- <span class="text-cyan">Enterprise IAM:</span>
+  Microsoft Entra ID, Okta Identity Cloud, CyberArk PAM (Vault, PVWA, CPM, PSM, CCP), SAML 2.0, OAuth 2.0, OIDC, SCIM Automated Provisioning, Zero-Trust Conditional Access, Role-Based Access Control (RBAC).
+- <span class="text-cyan">Software & App Development:</span>
+  Python (Django 5, DRF, Flask), ReactJS, Vite, Flutter (Dart), Native Android (Java/Kotlin), Android TV (Leanback), Node.js, Express, Tailwind CSS, PostgreSQL, MySQL, SQLite, Firebase.
+- <span class="text-cyan">Cloud & AI/ML:</span>
+  PyTorch, TensorFlow, OpenCV, MediaPipe (Face Mesh), Librosa, XGBoost, Published Paper (AIMLA 2025 #455), AWS Compute, Google Cloud, Vercel, PythonAnywhere, Bash & Linux Sysadmin.
       `,
       certs: () => `
 <strong>Verified Credentials (14 Credly Badges + Google Drive):</strong>
@@ -86,21 +105,14 @@ Positioning: Engineering multi-platform software, automating enterprise identity
 - Honors: 1st Place PwC Hackathon, National Apprenticeship Certificate (94.8%)
 - Certificates Folder: <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" class="text-cyan">Open Drive Folder ↗</a>
       `,
-      iam: () => `
-<strong>Enterprise Identity Architecture:</strong>
-Zero Trust Model: Never Trust, Always Verify.
-- Enforcing device compliance, geolocation fencing, and sign-in risk triggers.
-- Central Credential Provider (CCP) eliminating hardcoded passwords in scripts.
-- Automated SCIM provisioning and Just-in-Time (JIT) access governance.
-      `,
       contact: () => `
-<strong>Contact & Verification:</strong>
-- Domain: <a href="https://shivaganesh.net" target="_blank" class="text-cyan">shivaganesh.net</a>
-- Email: <a href="mailto:dornalashivaganesh0@gmail.com" class="text-cyan">dornalashivaganesh0@gmail.com</a>
+<strong>Social Media, Profiles & Direct Contact:</strong>
+- Domain: <a href="https://shivaganesh.net" target="_blank" class="text-cyan">https://shivaganesh.net</a>
 - GitHub: <a href="https://github.com/shivaganesh22" target="_blank" class="text-cyan">https://github.com/shivaganesh22</a>
 - LinkedIn: <a href="https://www.linkedin.com/in/shivaganesh6" target="_blank" class="text-cyan">https://www.linkedin.com/in/shivaganesh6</a>
-- Credly: <a href="https://www.credly.com/users/shivaganesh22" target="_blank" class="text-cyan">https://www.credly.com/users/shivaganesh22</a>
-- Certificates: <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" class="text-cyan">Google Drive Certificates</a>
+- Credly Badges: <a href="https://www.credly.com/users/shivaganesh22" target="_blank" class="text-cyan">https://www.credly.com/users/shivaganesh22</a>
+- Official Drive: <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" class="text-cyan">Certificates & Resumes Drive Folder</a>
+- Email: <a href="mailto:shivaganeshd22@gmail.com" class="text-cyan">shivaganeshd22@gmail.com</a>
       `,
       resume: () => {
         window.open('https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5', '_blank');
