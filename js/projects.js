@@ -1,150 +1,141 @@
 /* ==========================================================================
    SHIVA GANESH PORTFOLIO - PROJECTS ARCHIVE & VERIFIED DEPLOYMENTS
-   Accurate descriptions sourced directly from verified resumes.
+   Top 5 Flagship Systems & Complete Project Repository Portfolio
    ========================================================================== */
 
 const PROJECTS_DATA = {
+  // TOP 5 FEATURED SHOWCASE SYSTEMS
   flagships: [
     {
       id: "rsgmovies",
       category: "web_mobile",
-      badge: "Live Streaming & Downloading Platform",
-      title: "RSG MOVIES (Django + RestAPI, Flutter App, ReactJs)",
-      subtitle: "Movierulz · TamilMV · iBomma · MovieBlast · iStreamflare · Seedr · YouTube Downloader",
+      badge: "Live Multi-Screen Media Ecosystem",
+      title: "RSGMovies: Distributed Streaming Platform (Web, Android TV, Mobile & Backend)",
+      subtitle: "Django REST Framework · ReactJS Web · Android TV Leanback App · Flutter Mobile · Seedr Cloud API",
       liveUrl: "https://rsgmovies.com",
       liveBackendUrl: "https://rsg-movies.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/rsgmovies",
-      whatItHas: "Built a movie platform integrating APIs (Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, MovierulzHD) for streaming and downloading. Users can upload movies to Seedr for free access in various resolutions, with additional features like a YouTube downloader and torrent searcher.",
+      whatItHas: "A production-grade, distributed media aggregation and streaming platform engineered for multi-screen consumption across Web, Mobile, and living room Android TVs. Features custom real-time scraping engines that aggregate, parse, and proxy high-definition streams and magnet links from Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, and MovierulzHD. Incorporates cloud-based torrent transcoding via the Seedr REST API with multi-resolution playback and an integrated YouTube video downloader. Engineered with a dedicated Android TV Leanback application featuring 10-foot spatial D-pad navigation, Leanback focus management, and ExoPlayer hardware decoding, paired with a real-time Node.js background worker broadcasting instant release updates via Firebase Cloud Messaging (FCM).",
       keyFeatures: [
-        { title: "Multi-Source Scraping", desc: "Aggregates and indexes streams and magnet links across Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, and MovierulzHD." },
-        { title: "Seedr Cloud Transcoder", desc: "Direct Seedr API integration for cloud torrent downloading, video playback across resolutions, and YouTube video downloader." },
-        { title: "Multi-Client Ecosystem", desc: "Responsive ReactJs web application, Flutter mobile app, and dedicated Android TV interface with 10-foot remote D-pad controls." },
-        { title: "Push Notification Daemon", desc: "Automated notification worker connected to PostgreSQL broadcasting instant release alerts via Firebase Cloud Messaging." }
+        { title: "Multi-Source Scraping & Stream Proxy", desc: "Automated resilient scrapers aggregating streams and magnet links from Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, and MovierulzHD with HMAC-signed backend stream proxying." },
+        { title: "Android TV 10-Foot Spatial UI", desc: "Dedicated Android TV application built with the AndroidX Leanback library, custom spatial D-pad remote focus handlers, and ExoPlayer hardware video acceleration." },
+        { title: "Cloud Transcoding & Torrent Engine", desc: "Seedr API integration enabling remote cloud torrent caching, multi-resolution video transcoding, and built-in YouTube video downloading." },
+        { title: "Real-Time Push Notification Worker", desc: "Node.js background daemon connected to PostgreSQL broadcasting instant release alerts across web and mobile clients via Firebase Cloud Messaging." }
       ],
-      tech: ["Django REST Framework", "ReactJS", "Flutter", "Android TV (Leanback)", "Node.js", "Seedr API", "Firebase Cloud Messaging", "PostgreSQL", "Vercel"]
-    },
-    {
-      id: "price-tracker",
-      category: "web_mobile",
-      badge: "Live Deal Tracking Platform",
-      title: "Price Tracker (ReactJS + Django)",
-      subtitle: "Amazon & Flipkart Deal Monitor · Personalized Price Alerts · Vercel",
-      liveUrl: "https://rsgtracker.vercel.app",
-      liveBackendUrl: "https://rsg-price.vercel.app",
-      githubUrl: "https://github.com/shivaganesh22/price-tracker",
-      whatItHas: "Developed a dynamic price tracking system that monitors product prices and highlights daily deals from Amazon and Flipkart. Users can set personalized alerts for price changes, with instant notifications sent via email and app, ensuring they never miss a deal.",
-      keyFeatures: [
-        { title: "Live Price Scraping", desc: "Automated scrapers monitoring live product pricing, discounts, and historical deal trends across Amazon and Flipkart." },
-        { title: "Personalized Deal Alerts", desc: "Configurable price thresholds that dispatch automated alerts via email and app notifications when prices drop." },
-        { title: "Independent Microservices", desc: "Dual deployments on Vercel: responsive ReactJS frontend (rsgtracker.vercel.app) and Django REST backend (rsg-price.vercel.app)." }
-      ],
-      tech: ["ReactJS", "Django REST Framework", "Python", "Firebase", "Tailwind CSS", "Vercel"]
-    },
-    {
-      id: "attendance-system",
-      category: "web_mobile",
-      badge: "Automated CCTV Biometrics (AUpulse)",
-      title: "Attendance Management System (Flutter App + Django API)",
-      subtitle: "CCTV Facial Recognition · Timetable Integration · Proxy Prevention",
-      liveUrl: "https://aupulse-api.vercel.app",
-      liveBackendUrl: "https://aupulse-cv.vercel.app",
-      githubUrl: "https://github.com/shivaganesh22/mini-project",
-      whatItHas: "An automated attendance system linked with CCTV and class timetable. Reduces human effort and prevents proxy attendance by marking students present based on real-time facial data. Admins can manage academic structures and generate detailed attendance reports.",
-      keyFeatures: [
-        { title: "Real-Time Face Recognition", desc: "CCTV facial recognition pipeline matching classroom video feeds against enrolled student facial embeddings." },
-        { title: "Proxy Prevention", desc: "Completely eliminates manual roll-calls and proxy marking by synchronizing presence with academic timetables and rooms." },
-        { title: "Admin Reports & Student App", desc: "Cross-platform Flutter mobile client for students and administrative dashboard for generating presence reports." }
-      ],
-      tech: ["Flutter / Dart", "OpenCV", "Facial Recognition", "Django REST API", "Python", "PostgreSQL", "Vercel"]
-    },
-    {
-      id: "deduplication",
-      category: "ai_ml",
-      badge: "Published Research · AIMLA 2025 Paper #455",
-      title: "Image Deduplication Tool (Django)",
-      subtitle: "AIMLA 2025 Paper #455 · Pretrained ResNet / EfficientNet / MobileNet · Storage Optimization",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/major-project",
-      whatItHas: "Built a platform to detect duplicate images using pretrained models (ResNet, EfficientNet, MobileNet) and hybrid methods. Displays similarity percentages, resource usage, and flags duplicates, helping reduce storage and save costs. Published research paper at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025, Paper #455).",
-      keyFeatures: [
-        { title: "Hybrid Feature Extraction", desc: "Combines deep convolutional features from ResNet, EfficientNet, and MobileNet with fast perceptual hashing (pHash/dHash)." },
-        { title: "Cloud Storage Optimization", desc: "Identifies duplicate, cropped, or filtered images to reduce redundant cloud storage footprints and infrastructure costs." },
-        { title: "AIMLA 2025 Paper #455", desc: "Peer-reviewed research publication presenting experimental benchmarks on deep learning deduplication models." }
-      ],
-      tech: ["PyTorch", "Django", "ResNet", "EfficientNet", "MobileNet", "OpenCV", "Perceptual Hashing", "Python"]
+      tech: ["Django REST Framework", "ReactJS", "Android TV (Leanback)", "Flutter", "Node.js", "Seedr API", "ExoPlayer", "Firebase Cloud Messaging", "PostgreSQL", "Vercel"]
     },
     {
       id: "auto-send",
       category: "web_mobile",
       badge: "Live Social Automation SaaS",
-      title: "Auto-Send: Instagram Comment & DM Automation (Django)",
-      subtitle: "Meta Graph API v26.0 · Webhooks · HMAC Signature Verification · Vercel",
+      title: "Auto-Send: Automated Social Engagement & DM Dispatch Engine",
+      subtitle: "Django 5 · Meta Graph API v26.0 · Webhooks · HMAC-SHA256 · Alpine.js · Tailwind CSS",
       liveUrl: "https://rsgflow.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/Auto-Send",
-      whatItHas: "Automated Instagram comment monitoring and private DM dispatch SaaS. Intercepts incoming user comments in real time via Meta Graph API v26.0 webhooks with SHA-256 HMAC challenge validation, comment ID deduplication, and follower gating before sending resource download links.",
+      whatItHas: "An enterprise-grade social automation SaaS designed to capture lead engagement on Instagram in real time. Listens for incoming public comments via Meta Graph API v26.0 webhooks with SHA-256 HMAC cryptographic signature validation. Employs an idempotent dispatch engine that tracks comment IDs to guarantee zero duplicate messages, executes automated follower verification gating before unlocking private download resources, and delivers instantaneous contextual direct messages (DMs) and public comment replies. Includes an interactive analytics dashboard tracking API latency, delivery rates, and exportable audit logs.",
       keyFeatures: [
-        { title: "Real-Time Webhook Engine", desc: "Ingests incoming Instagram comment webhooks with SHA-256 HMAC signature verification and challenge handshakes." },
-        { title: "Zero-Duplicate Idempotency", desc: "Strict comment ID tracking ensures each interaction is handled exactly once without duplicate automated messages." },
-        { title: "Follower Gating Pipeline", desc: "Automated API check verifying user follow status before delivering private bonuses or resource download links." }
+        { title: "Real-Time Webhook Verification", desc: "Ingests live Instagram comment payloads with SHA-256 HMAC challenge validation and automated token renewal." },
+        { title: "Zero-Duplicate Idempotency Engine", desc: "Prevents duplicate outreach through strict transactional database locks on incoming comment_id records." },
+        { title: "Follower Gating Pipeline", desc: "Automatically queries the Meta Graph API to verify account follow status before dispatching gated links and bonus downloads." },
+        { title: "Live Analytics & Audit Logs", desc: "Interactive metrics dashboard tracking API response latency, dispatch success percentages, and exportable CSV audit histories." }
       ],
-      tech: ["Django 5", "Python", "Meta Graph API v26.0", "Webhooks", "HMAC-SHA256", "Alpine.js", "Tailwind CSS", "Vercel"]
+      tech: ["Django 5", "Python", "Meta Graph API v26.0", "Webhooks", "HMAC-SHA256", "Alpine.js", "Chart.js", "Tailwind CSS", "Vercel"]
     },
     {
-      id: "app-onboarding",
-      category: "iam_security",
-      badge: "PwC Enterprise IAM Automation",
-      title: "Enterprise Application Onboarding & Identity Governance",
-      subtitle: "ServiceNow RITM Automation · Microsoft Entra ID · Okta · Microsoft Graph API",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/app_onboarding",
-      whatItHas: "Automated enterprise identity onboarding tool ingesting ServiceNow RITM tickets to provision applications into Microsoft Entra ID and Okta via Microsoft Graph API with SAML 2.0 / OIDC single sign-on, attribute claims, and SCIM user provisioning.",
-      keyFeatures: [
-        { title: "ServiceNow RITM Ingestion", desc: "Automatically parses application onboarding tickets, extracts metadata, claims mappings, and redirect URIs." },
-        { title: "Entra Graph API Scripting", desc: "Programmatic creation of Enterprise Applications, Service Principals, and SSO federation via Python & PowerShell." },
-        { title: "SCIM & Privilege Lifecycle", desc: "Automated SCIM user provisioning, Just-In-Time (JIT) access, and role assignment governance." }
-      ],
-      tech: ["Microsoft Entra ID", "Okta", "CyberArk PAM", "Delinea Secret Server", "ServiceNow RITM", "Microsoft Graph API", "Python", "PowerShell", "SAML 2.0", "SCIM"]
-    },
-    {
-      id: "cms-app",
+      id: "price-tracker",
       category: "web_mobile",
-      badge: "Native Android Mobile App",
-      title: "Complaint Management System (Android App)",
-      subtitle: "Government School Grievance Portal · Real-Time Chat & Monitoring Interface",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/cms",
-      whatItHas: "Designed an Android app for government schools allowing students to submit complaints. Features include a monitoring team interface with chat functionality for real-time verification and forwarding of complaints to schools.",
+      badge: "Live Full-Stack Deal Intelligence",
+      title: "Price Tracker: Distributed E-Commerce Price Monitor & Alert Engine",
+      subtitle: "ReactJS 18 Frontend · Django REST Framework Backend · Firebase · Cloud Deployments",
+      liveUrl: "https://rsgtracker.vercel.app",
+      liveBackendUrl: "https://rsg-price.vercel.app",
+      githubUrl: "https://github.com/shivaganesh22/price-tracker",
+      whatItHas: "A distributed e-commerce price monitoring platform tracking live product pricing, discounts, and historical deal fluctuations across Amazon and Flipkart. Features independent production microservices deployed on Vercel: a responsive ReactJS 18 client-side analytics interface and a high-throughput Django REST Framework backend API. Automatically tracks price changes and triggers personalized real-time alerts via email and push notifications when products hit user-defined price minimums.",
       keyFeatures: [
-        { title: "Student Grievance Submission", desc: "Native Android app enabling students to lodge grievances regarding school infrastructure and administration." },
-        { title: "Monitoring Team Chat Panel", desc: "Dedicated verification interface with real-time chat for evaluating issues and coordinating with schools." },
-        { title: "Real-Time Complaint Routing", desc: "Streamlined forwarding of verified complaints to school authorities with escalation tracking." }
+        { title: "Automated Price Scraping Engine", desc: "Resilient web scraping pipelines continuously capturing product price trends, deal percentages, and historical minimums." },
+        { title: "Personalized Threshold Triggering", desc: "User-configured alert thresholds that trigger automated email and app notifications whenever a target price is reached." },
+        { title: "Dual Cloud Architecture", desc: "Fully decoupled production deployments on Vercel: responsive React 18 UI (rsgtracker.vercel.app) and Django REST API (rsg-price.vercel.app)." }
       ],
-      tech: ["Android SDK", "Java", "REST API", "Real-Time Chat", "Push Notifications", "MySQL"]
+      tech: ["ReactJS 18", "Django REST Framework", "Python", "Firebase", "Web Scraping", "Tailwind CSS", "Vercel"]
     },
     {
-      id: "fixitnow",
+      id: "attendance-system",
       category: "web_mobile",
-      badge: "Cross-Platform Mobile App",
-      title: "FixItNow: Civic Grievance & Community Complaint App (Flutter)",
-      subtitle: "Video & Photo Evidence · Real-Time Ticket Pipeline · Community Upvotes",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/fixit-now",
-      whatItHas: "Cross-platform civic grievance reporting mobile app allowing citizens to lodge complaints with photo and video evidence, track resolution stages in real time, and interact with community discussions.",
+      badge: "Biometric Computer Vision Pipeline",
+      title: "AUpulse: CCTV Facial Recognition Attendance & Academic Mapping",
+      subtitle: "Flutter Mobile App · OpenCV Biometric Embeddings · Django REST API · Proxy Prevention",
+      liveUrl: "https://aupulse-api.vercel.app",
+      liveBackendUrl: "https://aupulse-cv.vercel.app",
+      githubUrl: "https://github.com/shivaganesh22/mini-project",
+      whatItHas: "An end-to-end automated academic attendance management platform integrating classroom CCTV camera feeds with real-time biometric face recognition. Eliminates manual roll-call overhead and proxy attendance by matching live video frames against enrolled student facial embeddings. Dynamically maps student presence against academic timetables, room schedules, and faculty subject models, providing a cross-platform Flutter mobile client for real-time presence tracking and an administrative dashboard for attendance shortage analytics.",
       keyFeatures: [
-        { title: "Multimedia Evidence Upload", desc: "Integrated camera and video recording allowing citizens to attach verifiable evidence to grievances." },
-        { title: "Resolution Tracking Pipeline", desc: "Transparent status progression from ticket submission through municipal inspection, resolution, and closure." },
-        { title: "Community Upvoting & Chat", desc: "Local community engagement module enabling neighbors to upvote, comment on, and highlight priority civic matters." }
+        { title: "CCTV Biometric Recognition", desc: "OpenCV and deep facial feature extraction pipeline analyzing video streams to mark attendance in real time." },
+        { title: "Anti-Proxy Timetable Sync", desc: "Matches detected student identities directly against scheduled class timetables and room assignments to prevent fraudulent roll-call." },
+        { title: "Mobile & Administrative Suite", desc: "Cross-platform Flutter mobile app for students with presence percentages and faculty admin tools for generating official attendance shortage reports." }
       ],
-      tech: ["Flutter", "Dart", "REST API", "Video Player", "Push Notifications", "Cross-Platform Mobile"]
+      tech: ["Flutter / Dart", "OpenCV", "Facial Recognition", "Django REST Framework", "Python", "PostgreSQL", "Vercel"]
+    },
+    {
+      id: "deduplication",
+      category: "ai_ml",
+      badge: "Published Research · AIMLA 2025 Paper #455",
+      title: "Image Deduplication & Cloud Storage Optimization Platform",
+      subtitle: "PyTorch · ResNet / EfficientNet / MobileNet · Perceptual Hashing · AIMLA 2025",
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/major-project",
+      whatItHas: "Published machine learning research presented at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025, Paper ID #455). Formulates a hybrid feature extraction architecture coupling deep convolutional embeddings from pretrained ResNet, EfficientNet, and MobileNet models with perceptual hashing algorithms (pHash, dHash). Detects duplicate, cropped, resized, and color-filtered media at scale with high precision, displaying similarity percentages, compute resource usage, and storage savings metrics to dramatically cut cloud media storage expenses.",
+      keyFeatures: [
+        { title: "Hybrid Deep Embeddings + Hashing", desc: "Combines deep convolutional neural representations with fast perceptual hash hamming distance metrics for real-time duplicate detection." },
+        { title: "Storage & Cost Reduction", desc: "Flags redundant visual assets across cloud repositories, reducing multi-terabyte storage footprints and bandwidth overhead." },
+        { title: "Published Academic Paper", desc: "Co-authored and published peer-reviewed conference research paper (AIMLA 2025 Paper #455)." }
+      ],
+      tech: ["PyTorch", "Django", "ResNet", "EfficientNet", "MobileNet", "OpenCV", "Perceptual Hashing (pHash)", "Python"]
     }
   ],
 
+  // ALL OTHER REPOSITORIES & SYSTEMS
   supporting: [
+    {
+      title: "Admission Management System - AMS (Django)",
+      category: "web_mobile",
+      badge: "Web Counseling & Admission Portal",
+      desc: "Web-based engineering counseling and college seat allocation platform developed as a modernized, error-free alternative to traditional state EAMCET counseling portals. Traditional portals require candidates to manually cross-reference complex tables and manually enter code numbers, frequently resulting in mistaken college selections. AMS replaces this with dynamic dropdown selectors allowing candidates to submit prioritized college and branch choice lists (CSE, IT, ECE, EEE, CIV, MEC) based on entrance rank. Colleges receive instant application notifications with full student profiles to evaluate, approve, or reject seat allocations. Automated SMTP email triggers immediately dispatch official allotment letters to the student's registered email with college code, branch, and tuition fee details upon approval (or status alerts upon rejection), while a super-admin console oversees institutional capacity and overall allocation rounds.",
+      tech: ["Django", "Python", "SMTP Email Dispatch", "Role-Based Auth", "SQLite", "PythonAnywhere"],
+      liveUrl: "https://amsproject00.pythonanywhere.com",
+      githubUrl: "https://github.com/shivaganesh22/amsproject"
+    },
+    {
+      title: "Enterprise Application Onboarding & Identity Governance",
+      category: "iam_security",
+      badge: "PwC Enterprise IAM Automation",
+      desc: "Enterprise identity onboarding automation portal developed to streamline SaaS and custom application provisioning into Microsoft Entra ID and Okta. Ingests ServiceNow RITM tickets, validates metadata against XML schema profiles, and uses the Microsoft Graph API client to programmatically configure SAML 2.0 / OIDC single sign-on, attribute claims mappings, SCIM user provisioning, and Conditional Access zero-trust baselines.",
+      tech: ["Microsoft Entra ID", "Okta", "CyberArk PAM", "Delinea Secret Server", "ServiceNow RITM", "Microsoft Graph API", "Python", "PowerShell", "SAML 2.0", "SCIM"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/app_onboarding"
+    },
+    {
+      title: "Complaint Management System - CMS (Android App)",
+      category: "web_mobile",
+      badge: "Native Android App",
+      desc: "Native Android mobile application built for government schools allowing students to lodge grievances regarding school infrastructure and administrative issues. Features a dedicated monitoring team verification interface with real-time chat for evaluating reported issues, authenticating evidence, and automatically routing validated complaints to relevant school authorities with live status tracking.",
+      tech: ["Android SDK", "Java", "REST API", "Real-Time Chat", "Push Notifications", "MySQL"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/cms"
+    },
+    {
+      title: "FixItNow: Civic Grievance & Community Complaint App (Flutter)",
+      category: "web_mobile",
+      badge: "Cross-Platform Mobile App",
+      desc: "Cross-platform civic grievance reporting mobile application built in Flutter enabling citizens to report public infrastructure issues. Features camera and video recording for multimedia evidence uploads, a transparent ticket lifecycle tracking pipeline from inspection to resolution, and localized community discussion with upvoting to highlight critical neighborhood civic issues.",
+      tech: ["Flutter", "Dart", "REST API", "Video Player", "Push Notifications", "Cross-Platform Mobile"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/fixit-now"
+    },
     {
       title: "Ecommerce Platform with QR Fraud Prevention (Django)",
       category: "web_mobile",
       badge: "Live on PythonAnywhere",
-      desc: "Implemented an eCommerce platform with QR code scanning for fraud prevention. Each order generates a unique QR code for verification during returns, enhancing transaction security.",
+      desc: "Full-scale Django e-commerce platform incorporating cryptographic QR code scanning to combat return fraud and warranty spoofing. Each customer order invoice generates a unique tamper-evident cryptographic QR code that customer service and delivery personnel scan during returns to verify item provenance and enhance transaction authenticity.",
       tech: ["Django", "Python", "QR Cryptography", "SQLite", "PythonAnywhere"],
       liveUrl: "https://ecommerce0.pythonanywhere.com",
       githubUrl: "https://github.com/shivaganesh22/ecommerce"
@@ -153,7 +144,7 @@ const PROJECTS_DATA = {
       title: "Smart Farming Assistant (Django)",
       category: "ai_ml",
       badge: "Smart Agriculture Platform",
-      desc: "Developed a smart farming platform offering crop and fertilizer recommendations, weather forecasting, and government scheme information. Includes functionalities for buying and selling crops, providing a comprehensive solution for modern agriculture.",
+      desc: "Precision agriculture advisor delivering machine-learning-driven crop and fertilizer suggestions based on soil NPK values and climatic factors. Integrates real-time weather forecasting APIs, government agricultural scheme repositories, and a peer-to-peer digital marketplace for buying and selling farm produce.",
       tech: ["Django", "Scikit-Learn", "Weather API", "NumPy", "Bootstrap"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/farming"
@@ -162,7 +153,7 @@ const PROJECTS_DATA = {
       title: "Aadhar-Linked Voter Card System (Django)",
       category: "iam_security",
       badge: "Identity Verification",
-      desc: "Created a secure system for registering and updating voter cards linked to Aadhar to prevent duplication and ensure accurate records.",
+      desc: "Secure electoral registration and verification system cross-validating voter cards with national Aadhar identity records. Implements duplicate-entry detection algorithms to eliminate fraudulent registrations, update constituency changes, and guarantee clean, verifiable electoral databases.",
       tech: ["Django", "Python", "Identity Verification", "SQLite"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/voter"
@@ -171,7 +162,7 @@ const PROJECTS_DATA = {
       title: "Kids Learning Portal (Django)",
       category: "web_mobile",
       badge: "Interactive Educational Portal",
-      desc: "Created an interactive educational portal where children engage with course-related videos, followed by quizzes to reinforce learning. Upon passing the quiz, they gain access to entertaining content, while those needing improvement are guided through the course material again, ensuring mastery before moving on to the next level.",
+      desc: "Interactive educational web platform where children engage with curated course videos followed by adaptive quizzes to reinforce subject comprehension. Upon passing the quiz, students unlock entertaining educational media, while those needing improvement are dynamically guided back through prerequisite course materials to ensure mastery.",
       tech: ["Django", "Python", "HTML5", "CSS3", "JavaScript"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/svsprojects"
@@ -180,7 +171,7 @@ const PROJECTS_DATA = {
       title: "PwC Enterprise IAM & Zero-Trust MFA Portal (Django)",
       category: "iam_security",
       badge: "Enterprise IAM & MFA",
-      desc: "Enterprise multi-factor authentication and zero-trust access control gateway built with Django 5 and django-allauth. Implements TOTP authenticator apps, FIDO2/WebAuthn hardware security keys, active session management with remote session revocation (usersessions), Google OAuth 2.0 social federation, Google reCAPTCHA bot defense, and HTTP 429 rate-limiting protection.",
+      desc: "Enterprise multi-factor authentication (MFA) and access control gateway built with Django 5 and django-allauth. Implements TOTP authenticator app support, FIDO2 / WebAuthn hardware security keys, active session management with remote session revocation (usersessions), Google OAuth 2.0 social federation, Google reCAPTCHA bot defense, and HTTP 429 rate-limiting protection.",
       tech: ["Django 5", "django-allauth", "TOTP MFA", "FIDO2 / WebAuthn", "Session Management", "reCAPTCHA", "JWT", "OAuth 2.0"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/pwc"
@@ -189,7 +180,7 @@ const PROJECTS_DATA = {
       title: "AppLock: ML Multi-Factor Biometric Authenticator",
       category: "ai_ml",
       badge: "Biometrics & Hardware Auth",
-      desc: "Multi-modal biometric security gateway combining MediaPipe 468 3D facial mesh landmarks (SVM), hand gesture recognition (Random Forest), and WebAuthn/FIDO2 hardware security keys.",
+      desc: "Multi-modal biometric security gateway combining MediaPipe 468 3D facial mesh landmarks (SVM), hand gesture recognition (Random Forest), and WebAuthn/FIDO2 hardware security keys for touchless zero-trust authentication.",
       tech: ["MediaPipe", "Scikit-Learn (SVM & RF)", "WebAuthn / FIDO2", "Flask", "OpenCV", "Python"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/applock"
@@ -198,7 +189,7 @@ const PROJECTS_DATA = {
       title: "Wardobe: P2P Outfit Rental & Fashion Platform (Django)",
       category: "web_mobile",
       badge: "Peer-to-Peer Fashion Marketplace",
-      desc: "Peer-to-peer outfit rental and wardrobe sharing platform built in Django with Razorpay payment gateway integration, user profile management, and cryptographic QR code handover and return verification.",
+      desc: "Community clothing rental and wardrobe sharing platform built in Django. Features Razorpay digital payment integration, cryptographic QR codes for garment handover and return verification, location-based wardrobe discovery, and user profile management.",
       tech: ["Django", "Python", "Razorpay API", "QR Cryptography", "Bootstrap", "SQLite"],
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/wardobe"
@@ -220,15 +211,6 @@ const PROJECTS_DATA = {
       tech: ["Django", "Bootstrap", "Role-Based Auth", "PythonAnywhere"],
       liveUrl: "https://pms0.pythonanywhere.com/",
       githubUrl: "https://github.com/shivaganesh22/pms"
-    },
-    {
-      title: "Admission Management System - AMS (Django)",
-      category: "web_mobile",
-      badge: "Live on PythonAnywhere",
-      desc: "Automated student admission portal handling application intake, document verification workflows, automated merit list calculations, and department allotment tracking.",
-      tech: ["Django", "Python", "Workflow Engine", "PythonAnywhere"],
-      liveUrl: "https://amsproject00.pythonanywhere.com",
-      githubUrl: "https://github.com/shivaganesh22/amsproject"
     },
     {
       title: "ProctorVault: Remote Exam Integrity Guardian (Django)",
@@ -278,7 +260,7 @@ const PROJECTS_DATA = {
   ]
 };
 
-// Render Flagship Projects (Clean cards: What it has, Key Capabilities, Tech Stack, Live & Repo links)
+// Render Flagship Projects (TOP 5 full-screen showcase cards)
 function renderFlagshipProjects() {
   const container = document.getElementById('flagship-list-container');
   if (!container) return;

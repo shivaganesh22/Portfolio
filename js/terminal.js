@@ -51,11 +51,11 @@ Expertise: Multi-platform applications, low-level Android reverse engineering, o
       `,
       projects: () => `
 <strong>Key Projects & Live Deployments:</strong>
-1. <span class="text-cyan">RSG MOVIES (Django + RestAPI, Flutter App, ReactJs)</span>:
+1. <span class="text-cyan">RSGMovies: Distributed Streaming (Web, Android TV, Mobile & Backend)</span>:
    - Live Website: <a href="https://rsgmovies.com" target="_blank" class="text-emerald">rsgmovies.com</a>
    - Live Backend: <a href="https://rsg-movies.vercel.app" target="_blank" class="text-emerald">rsg-movies.vercel.app</a>
    - Source Code: <a href="https://github.com/shivaganesh22/rsgmovies" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies</a>
-   - Integrated APIs: Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, MovierulzHD, Seedr, YouTube Downloader
+   - Integrated APIs & TV: Android TV Leanback app, Movierulz, TamilMV, iBomma, MovieBlast, iStreamflare, MovierulzHD, Seedr, YouTube Downloader
 2. <span class="text-cyan">Price Tracker (ReactJS + Django)</span>:
    - Live Frontend: <a href="https://rsgtracker.vercel.app" target="_blank" class="text-emerald">rsgtracker.vercel.app</a>
    - Live Backend: <a href="https://rsg-price.vercel.app" target="_blank" class="text-emerald">rsg-price.vercel.app</a>
@@ -81,13 +81,17 @@ Expertise: Multi-platform applications, low-level Android reverse engineering, o
    - Source Code: <a href="https://github.com/shivaganesh22/farming" target="_blank" class="text-cyan">github.com/shivaganesh22/farming</a>
 10. <span class="text-cyan">Aadhar-Linked Voter Card System (Django)</span>:
     - Source Code: <a href="https://github.com/shivaganesh22/voter" target="_blank" class="text-cyan">github.com/shivaganesh22/voter</a>
-11. <span class="text-cyan">Kids Learning Portal (Django)</span>:
+11. <span class="text-cyan">Admission Management System - AMS Web Counseling (Django)</span>:
+    - Live Website: <a href="https://amsproject00.pythonanywhere.com" target="_blank" class="text-emerald">amsproject00.pythonanywhere.com</a>
+    - Source Code: <a href="https://github.com/shivaganesh22/amsproject" target="_blank" class="text-cyan">github.com/shivaganesh22/amsproject</a>
+    - Overview: Dynamic dropdown web counseling alternative to EAMCET with automated seat allocation & email notifications.
+12. <span class="text-cyan">Kids Learning Portal (Django)</span>:
     - Source Code: <a href="https://github.com/shivaganesh22/svsprojects" target="_blank" class="text-cyan">github.com/shivaganesh22/svsprojects</a>
-12. <span class="text-cyan">PwC Enterprise IAM & Zero-Trust MFA Portal</span>:
+13. <span class="text-cyan">PwC Enterprise IAM & Zero-Trust MFA Portal</span>:
     - Source Code: <a href="https://github.com/shivaganesh22/pwc" target="_blank" class="text-cyan">github.com/shivaganesh22/pwc</a>
-13. <span class="text-cyan">AppLock: Multi-Factor Biometric Authenticator</span>:
+14. <span class="text-cyan">AppLock: Multi-Factor Biometric Authenticator</span>:
     - Source Code: <a href="https://github.com/shivaganesh22/applock" target="_blank" class="text-cyan">github.com/shivaganesh22/applock</a>
-14. <span class="text-cyan">FixItNow: Civic Grievance & Complaint Mobile App</span>:
+15. <span class="text-cyan">FixItNow: Civic Grievance & Complaint Mobile App</span>:
     - Source Code: <a href="https://github.com/shivaganesh22/fixit-now" target="_blank" class="text-cyan">github.com/shivaganesh22/fixit-now</a>
       `,
       skills: () => `

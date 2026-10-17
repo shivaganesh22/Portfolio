@@ -1,44 +1,75 @@
 /* ==========================================================================
    SHIVA GANESH PORTFOLIO - RESPONSIVE & ACCESSIBILITY STYLESHEET
    Mobile, Tablet, Large screens, and prefers-reduced-motion
+   Carefully tuned to eliminate 2-character orphan wraps and layout overflow.
    ========================================================================== */
 
+/* Universal text wrapping rules to prevent clipping and 2-character orphan wraps */
+p, span, a, h1, h2, h3, h4, h5, h6,
+.hero-bio, .hero-greeting, .flagship-what-text,
+.project-desc, .stat-label, .skill-category-desc,
+.highlight-desc, .timeline-body-list, .section-desc {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* ==========================================================================
+   TABLET & COMPACT DESKTOP (<= 1080px)
+   ========================================================================== */
 @media (max-width: 1080px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
   
   .hero-visual {
     order: -1;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  .flagship-grid {
-    grid-template-columns: 1fr;
+  .identity-card-wrap {
+    max-width: 480px;
+    width: 100%;
   }
 
-  .flagship-media-side {
-    border-right: none;
-    border-bottom: 1px solid var(--bg-glass-border);
-  }
-
-  .simulator-controls-card {
-    grid-template-columns: 1fr 1fr;
+  .flagship-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 36px;
   }
 }
 
+/* ==========================================================================
+   MOBILE & TABLET PORTRAIT (<= 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
   :root {
-    --nav-height: 70px;
+    --nav-height: 64px;
   }
 
   section {
-    padding: 70px 0;
+    padding: 60px 0;
+  }
+
+  /* Compact Navbar */
+  .nav-social-group {
+    display: none;
+  }
+
+  .terminal-nav-btn {
+    display: none;
+  }
+
+  .brand-text .brand-sub {
+    display: none;
   }
 
   .nav-links {
@@ -48,12 +79,14 @@
     width: 100%;
     background: rgba(6, 9, 18, 0.98);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-bottom: 1px solid rgba(0, 242, 254, 0.2);
     flex-direction: column;
-    padding: 28px 24px;
-    gap: 20px;
+    padding: 24px 20px;
+    gap: 16px;
     align-items: flex-start;
     display: none;
+    z-index: 999;
   }
 
   .nav-links.open {
@@ -64,14 +97,275 @@
     display: block;
   }
 
-  .hero-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 16px);
+    padding-bottom: 40px;
+    min-height: auto;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .identity-card-wrap {
+    max-width: 100%;
+  }
+
+  .identity-card {
+    padding: 22px 18px;
+  }
+
+  .identity-header {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .avatar-wrapper {
+    width: 74px;
+    height: 74px;
+  }
+
+  .hero-badge-wrap {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .status-pill, .role-pill {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+  }
+
+  .hero-greeting {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.2rem, 8vw, 3.4rem);
+    line-height: 1.12;
+    margin-bottom: 12px;
+  }
+
+  .hero-roles {
+    font-size: clamp(1.15rem, 4.2vw, 1.5rem);
+    min-height: auto;
+    margin-bottom: 16px;
+    line-height: 1.35;
+    display: block;
+  }
+
+  .hero-bio {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .hero-social-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .hero-social-label {
+    width: 100%;
+    font-size: 0.74rem;
+    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-social-link {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-top: 18px;
+  }
+
+  .stat-item {
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+  }
+
+  .stat-num {
+    font-size: 1.55rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-top: 3px;
+  }
+
+  /* Flagship Cards */
+  .flagship-list {
+    gap: 28px;
+  }
+
+  .flagship-card-inner {
+    padding: 22px 18px;
+  }
+
+  .flagship-top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+
+  .flagship-badge-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .flagship-tag-badge {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+  }
+
+  .flagship-subtitle-mono {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .flagship-links-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-live-pill, .btn-repo-pill {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  .flagship-title {
+    font-size: 1.35rem;
+    line-height: 1.32;
+    margin-bottom: 12px;
+  }
+
+  .flagship-what-box {
+    padding: 16px 14px;
+    margin-bottom: 16px;
+  }
+
+  .flagship-what-text {
+    font-size: 0.92rem;
+    line-height: 1.62;
+  }
+
+  .flagship-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .highlight-box {
+    padding: 14px 12px;
+  }
+
+  .highlight-title {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .highlight-desc {
+    font-size: 0.85rem;
+    line-height: 1.48;
+  }
+
+  .flagship-tech-block {
+    padding-top: 14px;
+  }
+
+  .tech-block-title {
+    font-size: 0.74rem;
+  }
+
+  .tech-chip {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .skill-category-card {
+    padding: 22px 18px;
+  }
+
+  .skill-category-title {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .skill-category-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .skill-tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .skill-pill-badge {
+    font-size: 0.74rem;
+    padding: 4px 10px;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  /* All Projects Filter Bar */
   .projects-filter-bar {
     flex-direction: column;
     align-items: stretch;
+    gap: 14px;
+  }
+
+  .filter-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-pill {
+    padding: 6px 12px;
+    font-size: 0.78rem;
   }
 
   .projects-search-box {
@@ -80,124 +374,135 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
+  .project-card {
+    padding: 20px 16px;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+
+  .project-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /* Credentials */
   .credentials-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .protocol-sequence-flow {
+  .credential-card {
+    padding: 18px 16px;
+  }
+
+  /* Timeline */
+  .timeline-track {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    margin-bottom: 24px;
+  }
+
+  .timeline-node {
+    left: -20px;
+  }
+
+  .timeline-card {
+    padding: 18px 16px;
+  }
+
+  .timeline-header {
     flex-direction: column;
-    gap: 24px;
+    align-items: flex-start;
+    gap: 6px;
   }
 
-  .flow-connector {
-    width: 2px;
-    height: 30px;
-    min-width: 2px;
-    background: linear-gradient(180deg, rgba(0, 242, 254, 0.2), rgba(0, 242, 254, 0.8), rgba(0, 242, 254, 0.2));
+  .timeline-role-title {
+    font-size: 1.05rem;
+    line-height: 1.3;
   }
 
-  .flow-connector::after {
-    animation: move-arrow-vertical 2s infinite linear;
+  .timeline-badge-date {
+    font-size: 0.72rem;
   }
 
-  @keyframes move-arrow-vertical {
-    0% { top: 10%; opacity: 0.2; }
-    50% { opacity: 1; }
-    100% { top: 90%; opacity: 0.2; }
+  .timeline-body-list {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    padding-left: 18px;
   }
 
-  .simulator-controls-card {
-    grid-template-columns: 1fr;
-  }
-
+  /* Footer */
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     text-align: center;
   }
-
-  .floating-shield-badge {
-    display: none;
-  }
 }
 
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .flagship-top-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .flagship-links-group {
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .flagship-card-inner {
-    padding: 24px 18px;
-  }
-
-  .flagship-highlights-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-social-strip {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-}
-
+/* ==========================================================================
+   TINY SCREENS (<= 480px)
+   ========================================================================== */
 @media (max-width: 480px) {
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
+  .container {
+    padding: 0 16px;
   }
 
-  .btn {
-    width: 100%;
+  section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+    line-height: 1.55;
   }
 
   .hero-name {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+    line-height: 1.15;
   }
 
-  .hero-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  .hero-roles {
+    font-size: 1.15rem;
   }
 
-  .stat-item {
-    padding: 12px 14px;
-  }
-
-  .stat-num {
-    font-size: 1.5rem;
-  }
-
-  .flagship-links-group a {
+  .btn-live-pill, .btn-repo-pill {
     flex: 1;
-    min-width: 120px;
+    min-width: 110px;
     text-align: center;
     justify-content: center;
   }
 
+  .stat-num {
+    font-size: 1.4rem;
+  }
+
   .terminal-window {
     height: 85vh;
+    width: 95vw;
   }
 }
 
-/* Reduced Motion Support */
+/* ==========================================================================
+   PREFERS-REDUCED-MOTION
+   ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

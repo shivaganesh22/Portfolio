@@ -474,21 +474,24 @@ section {
 }
 
 .hero-name {
-  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  font-size: clamp(2.3rem, 5.5vw, 4.6rem);
   font-weight: 900;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
-  line-height: 1.08;
+  line-height: 1.1;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .hero-roles {
-  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-size: clamp(1.2rem, 2.5vw, 2.1rem);
   font-weight: 600;
   color: var(--text-secondary);
   margin-bottom: 24px;
   min-height: 48px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .role-decipher {
