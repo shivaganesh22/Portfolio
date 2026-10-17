@@ -19,6 +19,7 @@ Available system commands:
   <span class="text-cyan">experience</span>    - Enterprise work timeline & PwC IAM scope
   <span class="text-cyan">projects</span>      - Flagship ecosystems & live application links
   <span class="text-cyan">skills</span>        - Technical proficiencies & security tools
+  <span class="text-cyan">education</span>     - Academic degrees, Intermediate & 10th records
   <span class="text-cyan">certs</span>         - 14 Credly badges & Drive certificates
   <span class="text-cyan">iam</span>           - Enterprise identity security architecture
   <span class="text-cyan">contact</span>       - Public profiles, domains & contact links
@@ -30,10 +31,27 @@ Available system commands:
       whoami: () => `
 <strong>Dornala Shiva Ganesh</strong>
 Role: Full-Stack Software Developer · Offensive Security & Reverse Eng. · Enterprise IAM
-Education: B.Tech in IT, Anurag University (CGPA: <strong>9.05</strong>)
+Education: B.Tech (IT - CGPA <strong>9.05</strong>) · Intermediate (MPC - <strong>98% / 9.80 GPA</strong>) · SSC (<strong>9.3 GPA</strong>)
 Primary Domain: <a href="https://shivaganesh.net" target="_blank" class="text-cyan">shivaganesh.net</a>
 Email: <a href="mailto:shivaganeshd22@gmail.com" class="text-cyan">shivaganeshd22@gmail.com</a>
 Expertise: Multi-platform applications, low-level Android reverse engineering, offensive pentesting, and automated enterprise identity governance.
+      `,
+      education: () => `
+<strong>Academic Background & Qualifications:</strong>
+1. <span class="text-cyan">B.Tech in Information Technology</span> [Nov 2021 – May 2025]
+   - Institution: Anurag University, Hyderabad
+   - Cumulative Grade: CGPA <strong>9.05 / 10.0</strong>
+   - Achievements: 1st Place PwC Hackathon, AIMLA 2025 Research Paper #455
+2. <span class="text-cyan">Intermediate (Class XII / +2) — MPC (Mathematics, Physics, Chemistry)</span> [2019 – 2021]
+   - College: Narayana Junior College, Annojiguda, Hyderabad
+   - Board: Telangana State Board of Intermediate Education (TSBIE)
+   - Score: <strong>98% Aggregate (GPA: 9.80 / 10.0)</strong>
+   - Core: Advanced Mathematics, Physics, Chemistry
+3. <span class="text-cyan">Secondary School Certificate (SSC / Class X)</span> [2018 – 2019]
+   - School: Telangana State Model School (TS Model School), Pochampally
+   - Board: Telangana SSC Board (BSE Telangana)
+   - Score: <strong>GPA: 9.3 / 10.0</strong>
+   - Achievements: Distinction in Science & Mathematics
       `,
       experience: () => `
 <strong>Professional Experience:</strong>
