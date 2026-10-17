@@ -48,7 +48,7 @@
       </a>
 
       <nav class="nav-links" id="nav-links-wrap">
-        <a href="#flagships" class="nav-link" onclick="window.soundEngine?.playClick()">Ecosystems</a>
+        <a href="#flagships" class="nav-link" onclick="window.soundEngine?.playClick()">Flagships</a>
         <a href="#iam-studio" class="nav-link" onclick="window.soundEngine?.playClick()">IAM Studio</a>
         <a href="#security-labs" class="nav-link" onclick="window.soundEngine?.playClick()">Security Labs</a>
         <a href="#projects-grid-section" class="nav-link" onclick="window.soundEngine?.playClick()">All Projects</a>
@@ -124,7 +124,7 @@
 
           <div class="hero-actions">
             <a href="#flagships" class="btn btn-primary" onclick="window.soundEngine?.playClick()">
-              <span>Explore Ecosystems</span>
+              <span>Explore Projects</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
 
@@ -134,7 +134,7 @@
             </button>
 
             <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" rel="noopener" class="btn btn-outline" onclick="window.soundEngine?.playClick()">
-              <span>Verified Documents ↗</span>
+              <span>Certificates & Resumes Drive ↗</span>
             </a>
           </div>
 
@@ -207,8 +207,8 @@
                   </span>
                 </div>
                 <div class="spec-row">
-                  <span class="spec-key">Domains:</span>
-                  <span class="spec-val text-cyan">shivaganesh.net · sg22.me</span>
+                  <span class="spec-key">Domain:</span>
+                  <span class="spec-val text-cyan">shivaganesh.net</span>
                 </div>
                 <div class="spec-row">
                   <span class="spec-key">Research:</span>
@@ -220,8 +220,9 @@
                 <span class="tech-chip">Microsoft Entra ID</span>
                 <span class="tech-chip">Okta</span>
                 <span class="tech-chip">CyberArk PAM</span>
-                <span class="tech-chip">React / TVOS</span>
                 <span class="tech-chip">Django 5</span>
+                <span class="tech-chip">ReactJS</span>
+                <span class="tech-chip">Flutter</span>
                 <span class="tech-chip">SAML / OIDC</span>
               </div>
             </div>
@@ -248,7 +249,7 @@
     </section>
 
     <!-- ==========================================================================
-         01 // FLAGSHIP ENGINEERING ECOSYSTEMS
+         01 // FLAGSHIP ENGINEERING ECOSYSTEMS & ARCHITECTURE
          ========================================================================== -->
     <section id="flagships">
       <div class="container">
@@ -260,407 +261,8 @@
           </p>
         </div>
 
-        <div class="flagship-list">
-          <!-- FLAGSHIP 1: RSGMOVIES ECOSYSTEM -->
-          <article class="flagship-card" data-tilt id="card-rsgmovies">
-            <div class="flagship-grid">
-              <!-- Left: Interactive Device Switcher & Media Stage -->
-              <div class="flagship-media-side">
-                <div class="media-window-bar">
-                  <div class="window-dots">
-                    <span class="window-dot red"></span>
-                    <span class="window-dot yellow"></span>
-                    <span class="window-dot green"></span>
-                  </div>
-                  <div class="platform-switchers">
-                    <button class="platform-btn active" data-platform="tv">Android TV</button>
-                    <button class="platform-btn" data-platform="web">React Web</button>
-                    <button class="platform-btn" data-platform="backend">Backend API</button>
-                  </div>
-                </div>
-
-                <div class="media-display-stage">
-                  <img src="assets/img/projects/tv_home_clean.png" alt="RSGMovies Android TV Interface" class="stage-img" id="rsg-stage-img" />
-                  <div class="stage-badge" id="rsg-stage-badge">TV-Native React Native / ExoPlayer</div>
-                </div>
-
-                <!-- Thumbnails Carousel -->
-                <div class="thumbnail-carousel" id="rsg-thumb-carousel">
-                  <div class="thumb-item active" onclick="switchStageImage(this, 'assets/img/projects/tv_home_clean.png', 'TV Home Screen')">
-                    <img src="assets/img/projects/tv_home_clean.png" alt="TV Home" />
-                  </div>
-                  <div class="thumb-item" onclick="switchStageImage(this, 'assets/img/projects/tv_movies_grid_perfect.png', 'Leanback Catalog')">
-                    <img src="assets/img/projects/tv_movies_grid_perfect.png" alt="TV Movies Grid" />
-                  </div>
-                  <div class="thumb-item" onclick="switchStageImage(this, 'assets/img/projects/tv_detail_new.png', 'Movie Details & Streams')">
-                    <img src="assets/img/projects/tv_detail_new.png" alt="TV Detail Screen" />
-                  </div>
-                  <div class="thumb-item" onclick="switchStageImage(this, 'assets/img/projects/tv_settings_live.png', 'TV Settings & Account')">
-                    <img src="assets/img/projects/tv_settings_live.png" alt="TV Settings" />
-                  </div>
-                  <div class="thumb-item" onclick="switchStageImage(this, 'assets/img/projects/tv_action_dialog_opened.png', 'Action Dialog')">
-                    <img src="assets/img/projects/tv_action_dialog_opened.png" alt="Action Dialog" />
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right: Content & Architecture Tabs -->
-              <div class="flagship-content-side">
-                <div class="flagship-badge-header">
-                  <span class="case-study-label">FLAGSHIP ECOSYSTEM</span>
-                  <div class="verified-indicator">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Production Architecture</span>
-                  </div>
-                </div>
-
-                <h3 class="flagship-title">RSGMovies Multi-Client Streaming Platform</h3>
-                <div class="flagship-subtitle">React Web · Django REST API · Android TV (Leanback) · Native Android</div>
-
-                <p class="flagship-summary">
-                  An enterprise-grade, multi-platform media discovery & streaming ecosystem engineered across web, Android TV, and native mobile. Engineered with custom D-pad spatial focus traps, HMAC-SHA256 signed backend stream proxying, QR-based Entra authentication, and real-time server session revocation.
-                </p>
-
-                <!-- Architecture Tabs -->
-                <div class="flagship-tabs-nav">
-                  <button class="tab-btn active" data-tab="arch">Architecture</button>
-                  <button class="tab-btn" data-tab="sec">Security & Auth</button>
-                  <button class="tab-btn" data-tab="play">Playback Engine</button>
-                </div>
-
-                <div class="tab-content-panel active" data-panel="arch">
-                  <ul>
-                    <li><strong>Cross-Platform Parity:</strong> Unified Django REST API backend powering React Web (Vite), Android TV (<code>react-native-tvos</code>), and native Android.</li>
-                    <li><strong>Leanback D-Pad Engine:</strong> Spatial navigation with focus traps, auto-sliding hero carousels, and 100% remote control accessibility.</li>
-                    <li><strong>Secure Proxy Architecture:</strong> Backend HMAC-SHA256 signature validation preventing stream tampering and direct credential exposure.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-content-panel" data-panel="sec">
-                  <ul>
-                    <li><strong>QR Entra Authentication:</strong> TV generates an ephemeral cryptographic request token; authenticated web user approves via biometric/SSO; TV receives Bearer token.</li>
-                    <li><strong>Single-Session Enforcement:</strong> Displaced devices are immediately invalidated with server-side session revocation (<code>401 SESSION_REVOKED</code>).</li>
-                    <li><strong>In-Memory Secrets:</strong> Fallback provider tokens reside in volatile RAM only, never persisted to disk or AsyncStorage.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-content-panel" data-panel="play">
-                  <ul>
-                    <li><strong>Dynamic HLS Level Detection:</strong> Extracts actual bitrate levels directly from <code>.m3u8</code> manifest, discarding hardcoded resolution mocks.</li>
-                    <li><strong>External Player Hand-off:</strong> Direct intent triggers for VLC, MX Player, and PotPlayer with intent payload validation.</li>
-                    <li><strong>Intelligent Watch History:</strong> Automatically marks progress at 95% completion and persists cross-device watch positions.</li>
-                  </ul>
-                </div>
-
-                <div class="flagship-tags-wrap">
-                  <span class="tech-chip">React 18</span>
-                  <span class="tech-chip">Django 5</span>
-                  <span class="tech-chip">react-native-tvos</span>
-                  <span class="tech-chip">ExoPlayer</span>
-                  <span class="tech-chip">HLS Streaming</span>
-                  <span class="tech-chip">HMAC-SHA256</span>
-                  <span class="tech-chip">OIDC QR Auth</span>
-                </div>
-
-                <div class="flagship-footer-actions">
-                  <a href="https://github.com/shivaganesh22" target="_blank" rel="noopener" class="btn btn-glass" onclick="window.soundEngine?.playClick()">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span>View GitHub Repositories</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- FLAGSHIP 2: IAM AUTOMATION -->
-          <article class="flagship-card" data-tilt id="card-iam">
-            <div class="flagship-grid">
-              <div class="flagship-media-side">
-                <div class="media-window-bar">
-                  <div class="window-dots">
-                    <span class="window-dot red"></span>
-                    <span class="window-dot yellow"></span>
-                    <span class="window-dot green"></span>
-                  </div>
-                  <span class="mono text-cyan" style="font-size:0.8rem;">ENTRA_ID // AUTOMATION_PIPELINE</span>
-                </div>
-                <div class="media-display-stage">
-                  <img src="assets/img/projects/web_231056.png" alt="Enterprise IAM Automation Pipeline" class="stage-img" />
-                  <div class="stage-badge">Microsoft Entra ID · Okta · CyberArk</div>
-                </div>
-              </div>
-
-              <div class="flagship-content-side">
-                <div class="flagship-badge-header">
-                  <span class="case-study-label">ENTERPRISE IAM & GOVERNANCE</span>
-                  <div class="verified-indicator">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>PwC Professional Experience</span>
-                  </div>
-                </div>
-
-                <h3 class="flagship-title">Automated Enterprise App Onboarding & Zero-Trust Governance</h3>
-                <div class="flagship-subtitle">Microsoft Entra ID · Okta · PowerShell / Python · CyberArk PAM · SCIM</div>
-
-                <p class="flagship-summary">
-                  Designed and scripted enterprise-wide IAM automation to provision, configure, and govern single sign-on (SSO), role-based access control (RBAC), and Conditional Access policies across Microsoft Entra ID and Okta, drastically reducing onboarding cycle times.
-                </p>
-
-                <div class="flagship-tabs-nav">
-                  <button class="tab-btn active" data-tab="iam-orch">Orchestration</button>
-                  <button class="tab-btn" data-tab="iam-zt">Zero Trust</button>
-                  <button class="tab-btn" data-tab="iam-pam">Privileged Access</button>
-                </div>
-
-                <div class="tab-content-panel active" data-panel="iam-orch">
-                  <ul>
-                    <li><strong>Orchestrated Onboarding:</strong> Scripted Entra App Registrations, Enterprise Applications, Service Principals, and OAuth/OIDC redirect URIs based on parameterized inputs.</li>
-                    <li><strong>SAML 2.0 & OIDC Federation:</strong> Automated claims mapping, signing certificate rotation, token lifespans, and redirect URIs.</li>
-                    <li><strong>SCIM & JIT Provisioning:</strong> Configured automated user lifecycle synchronization from identity store to enterprise targets.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-content-panel" data-panel="iam-zt">
-                  <ul>
-                    <li><strong>Zero-Trust Conditional Access:</strong> Configured policies enforcing Phishing-Resistant MFA, device compliance, location fencing, and sign-in risk triggers.</li>
-                    <li><strong>Sign-On Policies:</strong> Okta sign-on and application access rule management for granular group-based authorization.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-content-panel" data-panel="iam-pam">
-                  <ul>
-                    <li><strong>CyberArk PAM:</strong> Configured Vault, PVWA, CPM password rotation, PSM session recording, and HTML5 Gateway.</li>
-                    <li><strong>Central Credential Provider (CCP):</strong> Secure programmatic credential injection eliminating hardcoded passwords in scripts.</li>
-                    <li><strong>Delinea Secret Server:</strong> Managed privileged account onboarding, heartbeat validation, and session connections.</li>
-                  </ul>
-                </div>
-
-                <div class="flagship-tags-wrap">
-                  <span class="tech-chip">Microsoft Entra ID</span>
-                  <span class="tech-chip">Okta</span>
-                  <span class="tech-chip">CyberArk PAM</span>
-                  <span class="tech-chip">Delinea</span>
-                  <span class="tech-chip">SAML 2.0</span>
-                  <span class="tech-chip">OAuth 2.0 / OIDC</span>
-                  <span class="tech-chip">SCIM</span>
-                  <span class="tech-chip">PowerShell</span>
-                </div>
-
-                <div class="flagship-footer-actions">
-                  <a href="https://github.com/shivaganesh22/pwc" target="_blank" rel="noopener" class="btn btn-glass" onclick="window.soundEngine?.playClick()">
-                    <span>View Repository Context</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- FLAGSHIP 3: AUTO-SEND SAAS -->
-          <article class="flagship-card" data-tilt id="card-autosend">
-            <div class="flagship-grid">
-              <div class="flagship-media-side">
-                <div class="media-window-bar">
-                  <div class="window-dots">
-                    <span class="window-dot red"></span>
-                    <span class="window-dot yellow"></span>
-                    <span class="window-dot green"></span>
-                  </div>
-                  <span class="mono text-cyan" style="font-size:0.8rem;">META_GRAPH_API // V26.0</span>
-                </div>
-                <div class="media-display-stage">
-                  <img src="assets/img/projects/web_231517.png" alt="Auto-Send Instagram Automation" class="stage-img" />
-                  <div class="stage-badge">Django 5 · Webhook challenge · Alpine.js</div>
-                </div>
-              </div>
-
-              <div class="flagship-content-side">
-                <div class="flagship-badge-header">
-                  <span class="case-study-label">WEBHOOK ENGINE & SAAS</span>
-                  <div class="verified-indicator">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Full-Stack SaaS</span>
-                  </div>
-                </div>
-
-                <h3 class="flagship-title">Auto-Send: Instagram Comment & DM Automation SaaS</h3>
-                <div class="flagship-subtitle">Django 5 · Meta Graph API v26.0 · Alpine.js · Tailwind · Chart.js</div>
-
-                <p class="flagship-summary">
-                  A high-throughput social automation platform processing real-time comment webhooks and dispatching personalized private DMs. Includes signature challenge verification, comment deduplication by ID, follower verification gating, and Graph API latency telemetry.
-                </p>
-
-                <div class="flagship-tabs-nav">
-                  <button class="tab-btn active" data-tab="auto-pipe">Event Pipeline</button>
-                  <button class="tab-btn" data-tab="auto-sec">Gating & Anti-Spam</button>
-                </div>
-
-                <div class="tab-content-panel active" data-panel="auto-pipe">
-                  <ul>
-                    <li><strong>Idempotent Event Pipeline:</strong> Webhook challenge verification with SHA-256 HMAC payload validation and strict <code>comment_id</code> deduplication caching.</li>
-                    <li><strong>Rule Engine:</strong> Per-post triggers for keyword matching, universal replies, and dynamic template variables (<code>{username}</code>, <code>{link}</code>, <code>{keyword}</code>).</li>
-                    <li><strong>Observability:</strong> Live Graph API inspector tracking payload dumps, round-trip latency, and CSV activity exports.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-content-panel" data-panel="auto-sec">
-                  <ul>
-                    <li><strong>Follower Gating:</strong> Verified API checks to ensure private DMs or bonus links are only dispatched to confirmed account followers.</li>
-                    <li><strong>Rate Limiting & Anti-Spam:</strong> Compliant pacing adhering to Meta platform rate limits with automatic exponential backoff.</li>
-                  </ul>
-                </div>
-
-                <div class="flagship-tags-wrap">
-                  <span class="tech-chip">Django 5</span>
-                  <span class="tech-chip">Meta Graph API v26.0</span>
-                  <span class="tech-chip">Webhooks</span>
-                  <span class="tech-chip">HMAC-SHA256</span>
-                  <span class="tech-chip">Chart.js</span>
-                  <span class="tech-chip">Alpine.js</span>
-                </div>
-
-                <div class="flagship-footer-actions">
-                  <a href="https://github.com/shivaganesh22/Auto-Send" target="_blank" rel="noopener" class="btn btn-glass" onclick="window.soundEngine?.playClick()">
-                    <span>View Auto-Send Repo ↗</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- FLAGSHIP 4: IMAGE DEDUPLICATION ML (AIMLA 2025) -->
-          <article class="flagship-card" data-tilt id="card-dedup">
-            <div class="flagship-grid">
-              <div class="flagship-media-side">
-                <div class="media-window-bar">
-                  <div class="window-dots">
-                    <span class="window-dot red"></span>
-                    <span class="window-dot yellow"></span>
-                    <span class="window-dot green"></span>
-                  </div>
-                  <span class="mono text-cyan" style="font-size:0.8rem;">AIMLA_2025 // PAPER_ID_455</span>
-                </div>
-                <div class="media-display-stage">
-                  <img src="assets/img/projects/web_231739.png" alt="Image Deduplication Research" class="stage-img" />
-                  <div class="stage-badge">Published Research · AIMLA 2025</div>
-                </div>
-              </div>
-
-              <div class="flagship-content-side">
-                <div class="flagship-badge-header">
-                  <span class="case-study-label">RESEARCH & MACHINE LEARNING</span>
-                  <div class="verified-indicator">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Peer-Reviewed Publication</span>
-                  </div>
-                </div>
-
-                <h3 class="flagship-title">Hybrid ML Model for Image Deduplication & Cloud Storage</h3>
-                <div class="flagship-subtitle">Pretrained CNNs · ResNet / EfficientNet / MobileNet · AIMLA 2025</div>
-
-                <p class="flagship-summary">
-                  Research publication presented at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025). Formulates a hybrid feature extraction and perceptual hashing architecture to detect near-duplicate, cropped, and modified visual media at scale.
-                </p>
-
-                <div class="flagship-tabs-nav">
-                  <button class="tab-btn active" data-tab="ml-pipeline">Pipeline</button>
-                  <button class="tab-btn" data-tab="ml-results">Paper Artifacts</button>
-                </div>
-
-                <div class="tab-content-panel active" data-panel="ml-pipeline">
-                  <ul>
-                    <li><strong>Deep Embeddings:</strong> Benchmarked deep convolutional representations from ResNet, EfficientNet, and MobileNet against traditional perceptual hashing (dHash/pHash).</li>
-                    <li><strong>Hybrid Clustering:</strong> Combines latent cosine similarity with Hamming distance clustering to catch cropped, resized, and color-shifted duplicates.</li>
-                    <li><strong>Storage Optimization:</strong> Designed to eliminate redundant visual data in high-volume enterprise and educational repositories, directly slashing storage overhead.</li>
-                  </ul>
-                </div>
-
-                <div class="tab-content-panel" data-panel="ml-results">
-                  <ul>
-                    <li><strong>Conference:</strong> 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025).</li>
-                    <li><strong>Contributor Certificate:</strong> Paper ID 455 — Verified in Google Drive certificate portfolio.</li>
-                    <li><strong>Stack:</strong> PyTorch 2.6, TensorFlow 2.18, OpenCV, ImageHash, scikit-learn, Django 5.1.</li>
-                  </ul>
-                </div>
-
-                <div class="flagship-tags-wrap">
-                  <span class="tech-chip">PyTorch</span>
-                  <span class="tech-chip">TensorFlow</span>
-                  <span class="tech-chip">ResNet</span>
-                  <span class="tech-chip">EfficientNet</span>
-                  <span class="tech-chip">Perceptual Hashing</span>
-                  <span class="tech-chip">AIMLA 2025</span>
-                </div>
-
-                <div class="flagship-footer-actions">
-                  <a href="https://github.com/shivaganesh22/deduplication" target="_blank" rel="noopener" class="btn btn-glass" onclick="window.soundEngine?.playClick()">
-                    <span>View Repository ↗</span>
-                  </a>
-                  <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" rel="noopener" class="btn btn-outline" onclick="window.soundEngine?.playClick()">
-                    <span>Paper Certificate ↗</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- FLAGSHIP 5: APPLOCK MULTI-AUTH -->
-          <article class="flagship-card" data-tilt id="card-applock">
-            <div class="flagship-grid">
-              <div class="flagship-media-side">
-                <div class="media-window-bar">
-                  <div class="window-dots">
-                    <span class="window-dot red"></span>
-                    <span class="window-dot yellow"></span>
-                    <span class="window-dot green"></span>
-                  </div>
-                  <span class="mono text-cyan" style="font-size:0.8rem;">BIOMETRIC_AUTH // WEBAUTHN</span>
-                </div>
-                <div class="media-display-stage">
-                  <img src="assets/img/projects/web_230950.png" alt="AppLock Multi-Auth" class="stage-img" />
-                  <div class="stage-badge">MediaPipe Face Landmarks · Random Forest · FIDO2</div>
-                </div>
-              </div>
-
-              <div class="flagship-content-side">
-                <div class="flagship-badge-header">
-                  <span class="case-study-label">AUTHENTICATION & BIOMETRICS</span>
-                  <div class="verified-indicator">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Alternative Auth Framework</span>
-                  </div>
-                </div>
-
-                <h3 class="flagship-title">AppLock: ML Multi-Factor Biometric Authentication</h3>
-                <div class="flagship-subtitle">MediaPipe 468 Face Landmarks · Hand Gesture RF · WebAuthn Hardware</div>
-
-                <p class="flagship-summary">
-                  A multi-factor alternative authentication framework allowing users to enroll and verify identities using computer vision biometrics, hardware security keys, and cryptographic hashes within a unified Flask application.
-                </p>
-
-                <div class="tab-content-panel active">
-                  <ul>
-                    <li><strong>Face Landmark Recognition:</strong> Extracts 468 facial 3D landmarks via MediaPipe, feeding normalized geometric distance vectors into a scikit-learn Support Vector Machine (RBF kernel).</li>
-                    <li><strong>Hand Gesture Classification:</strong> Computes 21 hand joint angles and curl characteristics evaluated by a Random Forest classifier.</li>
-                    <li><strong>WebAuthn / FIDO2 Hardware:</strong> Native biometric and hardware security key authentication with cryptographic origin challenge validation.</li>
-                  </ul>
-                </div>
-
-                <div class="flagship-tags-wrap">
-                  <span class="tech-chip">MediaPipe</span>
-                  <span class="tech-chip">scikit-learn (SVM/RF)</span>
-                  <span class="tech-chip">WebAuthn / FIDO2</span>
-                  <span class="tech-chip">Flask</span>
-                  <span class="tech-chip">OpenCV</span>
-                </div>
-
-                <div class="flagship-footer-actions">
-                  <a href="https://github.com/shivaganesh22/applock" target="_blank" rel="noopener" class="btn btn-glass" onclick="window.soundEngine?.playClick()">
-                    <span>View AppLock Repo ↗</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
+        <div class="flagship-list" id="flagship-list-container">
+          <!-- Populated dynamically via projects.js -->
         </div>
       </div>
     </section>
@@ -869,7 +471,7 @@
     </section>
 
     <!-- ==========================================================================
-         04 // ALL PROJECTS ARCHIVE & LABS
+         04 // ALL PROJECTS ARCHIVE WITH LIVE & REPO LINKS
          ========================================================================== -->
     <section id="projects-grid-section">
       <div class="container">
@@ -877,7 +479,7 @@
           <div class="section-tag">04 // Complete Portfolio Archive</div>
           <h2 class="section-title">All Engineering <span class="text-gradient">Projects</span></h2>
           <p class="section-desc">
-            Explore 20+ applications spanning web platforms, machine learning research, mobile systems, and administrative portals.
+            Explore applications spanning web platforms, machine learning research, mobile systems, and administrative portals with direct live demos and GitHub repository links.
           </p>
         </div>
 
@@ -904,7 +506,7 @@
     </section>
 
     <!-- ==========================================================================
-         05 // VERIFIED CREDENTIALS & BADGE VAULT
+         05 // VERIFIED CREDENTIALS & BADGE VAULT (DIRECT LINKS, NO REDUNDANT BADGES)
          ========================================================================== -->
     <section id="credentials">
       <div class="container">
@@ -912,18 +514,25 @@
           <div class="section-tag">05 // Verified Credentials</div>
           <h2 class="section-title">Verified <span class="text-gradient">Digital Credentials</span> & Badges</h2>
           <p class="section-desc">
-            14 verified Credly digital badges and official certifications across Google Cloud AI, Cisco Networking, EC-Council, AWS, and PwC.
+            14 verified digital badges from Credly and official certifications in Google Drive across Google Cloud AI, Cisco Networking, EC-Council, AWS, and PwC.
           </p>
         </div>
 
-        <!-- Credentials Category Filters -->
-        <div class="credentials-filter-row">
-          <button class="filter-pill cred-filter-pill active" data-filter="all">All Credentials (25+)</button>
-          <button class="filter-pill cred-filter-pill" data-filter="google">Google Cloud & AI</button>
-          <button class="filter-pill cred-filter-pill" data-filter="cisco">Cisco & Networking</button>
-          <button class="filter-pill cred-filter-pill" data-filter="security">Security & IAM</button>
-          <button class="filter-pill cred-filter-pill" data-filter="cloud">Cloud & Data Science</button>
-          <button class="filter-pill cred-filter-pill" data-filter="honors">Honors & Apprenticeship</button>
+        <!-- Top Action & Filter Row -->
+        <div class="credentials-top-bar">
+          <div class="credentials-filter-row">
+            <button class="filter-pill cred-filter-pill active" data-filter="all">All Credentials (22+)</button>
+            <button class="filter-pill cred-filter-pill" data-filter="google">Google Cloud & AI</button>
+            <button class="filter-pill cred-filter-pill" data-filter="cisco">Cisco & Networking</button>
+            <button class="filter-pill cred-filter-pill" data-filter="security">Security & IAM</button>
+            <button class="filter-pill cred-filter-pill" data-filter="cloud">Cloud & Data Science</button>
+            <button class="filter-pill cred-filter-pill" data-filter="honors">Honors & Apprenticeship</button>
+          </div>
+
+          <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" rel="noopener" class="btn-drive-folder" onclick="window.soundEngine?.playClick()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.71 3.5L1.15 15l3.43 6l6.55-11.5L7.71 3.5zM9.73 15L6.3 21h13.12l3.43-6H9.73zM22.85 15l-6.56-11.5H9.42l6.56 11.5h6.87z"/></svg>
+            <span>Open Google Drive Certificates ↗</span>
+          </a>
         </div>
 
         <!-- Dynamic Credentials Grid -->
@@ -953,23 +562,23 @@
             <div class="timeline-card">
               <div class="timeline-header">
                 <div>
-                  <h3 class="timeline-role-title">IAM Associate — Cyber Risk & Regulatory / Access Management</h3>
-                  <div class="timeline-org">PwC AC / PwC SDC Bangalore</div>
+                  <h3 class="timeline-role-title">IAM Associate — Cyber Risk & Regulatory / Access Management (AM)</h3>
+                  <div class="timeline-org">PwC AC Bangalore</div>
                 </div>
                 <span class="timeline-badge-date">August 2025 – Present</span>
               </div>
               <ul class="timeline-body-list">
                 <li>Managed enterprise user identities, security groups, and RBAC across <strong>Microsoft Entra ID</strong> and <strong>Okta</strong>.</li>
-                <li>Engineered automated scripts to streamline enterprise application onboarding into Entra ID, including SSO integration, admin roles, and Conditional Access policies.</li>
-                <li>Configured Conditional Access policies covering MFA enforcement, sign-in risk triggers, location-based fencing, and device compliance.</li>
-                <li>Integrated enterprise applications utilizing <strong>SAML 2.0</strong> and <strong>OIDC / OAuth 2.0</strong> with SCIM lifecycle provisioning.</li>
+                <li>Engineered automated scripts to streamline enterprise application onboarding into Entra ID, including SSO integration, admin roles, and Conditional Access policies based on input parameters.</li>
+                <li>Configured Conditional Access policies in Entra ID covering MFA enforcement, sign-in risk triggers, location-based fencing, and device compliance, as well as Okta Sign-On Policies.</li>
+                <li>Integrated enterprise applications utilizing <strong>SAML 2.0</strong> and <strong>OIDC / OAuth 2.0</strong> with SCIM / Just-in-Time (JIT) lifecycle provisioning.</li>
               </ul>
               <div class="timeline-tools-strip">
                 <span class="tech-chip">Microsoft Entra ID</span>
                 <span class="tech-chip">Okta</span>
                 <span class="tech-chip">SAML 2.0</span>
-                <span class="tech-chip">OIDC</span>
-                <span class="tech-chip">SCIM</span>
+                <span class="tech-chip">OIDC / OAuth</span>
+                <span class="tech-chip">SCIM / JIT</span>
                 <span class="tech-chip">PowerShell</span>
               </div>
             </div>
@@ -987,9 +596,9 @@
                 <span class="timeline-badge-date">February 2025 – August 2025</span>
               </div>
               <ul class="timeline-body-list">
-                <li>Hands-on configuration and maintenance of <strong>CyberArk</strong> core components: Vault, PVWA, CPM, PSM, and HTML5 Gateway.</li>
-                <li>Implemented <strong>Central Credential Provider (CCP)</strong> for automated, password-less credential injection.</li>
-                <li>Configured automated password rotation policies using CPM and managed privileged account lifecycles in <strong>Delinea Secret Server</strong>.</li>
+                <li>Hands-on deployment and configuration of <strong>CyberArk</strong> core components: Vault, PVWA, CPM, PSM, and HTML5 Gateway.</li>
+                <li>Implemented <strong>Central Credential Provider (CCP)</strong> for secure programmatic credential injection in automated processes.</li>
+                <li>Configured automated password rotation policies via CPM, enabled session monitoring through PSM, and managed privileged account lifecycles in <strong>Delinea Secret Server</strong>.</li>
                 <li>Received PwC Advisory Attachment Certificate of Appreciation (August 2025).</li>
               </ul>
               <div class="timeline-tools-strip">
@@ -1008,14 +617,14 @@
             <div class="timeline-card">
               <div class="timeline-header">
                 <div>
-                  <h3 class="timeline-role-title">Software Programmer (V1) & Associate Trainee</h3>
+                  <h3 class="timeline-role-title">National Apprenticeship Certificate: Software Programmer (V1)</h3>
                   <div class="timeline-org">NCVET / IT-ITeS Sector Skills Council · PwC SDC</div>
                 </div>
                 <span class="timeline-badge-date">August 2025 – August 2026</span>
               </div>
               <ul class="timeline-body-list">
-                <li>Graduated National Apprenticeship with a stellar score of <strong>94.8%</strong> and <strong>40 NCRF/NSQF Credits</strong>.</li>
-                <li>Executed 12 months & 5 days of enterprise software engineering, identity compliance, and regulatory risk projects.</li>
+                <li>Completed 12 months & 5 days of enterprise software engineering, achieving an outstanding score of <strong>94.8%</strong> and <strong>40 NCRF/NSQF Credits</strong>.</li>
+                <li>PwC Cyber Risk & Regulatory Launchpad (July 2024).</li>
               </ul>
               <div class="timeline-tools-strip">
                 <span class="tech-chip">94.8% Score</span>
@@ -1038,8 +647,8 @@
               </div>
               <ul class="timeline-body-list">
                 <li>Graduated with an exceptional cumulative GPA of <strong>9.05 / 10</strong>.</li>
-                <li>Conducted conference-published research: <em>"A Hybrid Machine Learning Model for Image Deduplication"</em> (AIMLA 2025 Paper #455).</li>
-                <li>First place in PwC Innovation Hackathon for designing an enterprise business solution.</li>
+                <li>Co-authored and published research paper: <em>"A Hybrid Machine Learning Model for Image Deduplication"</em> (AIMLA 2025 Paper #455).</li>
+                <li>Won <strong>1st Place in PwC Hackathon</strong> for designing an innovative enterprise solution with a collaborative team.</li>
               </ul>
               <div class="timeline-tools-strip">
                 <span class="tech-chip">CGPA: 9.05</span>
@@ -1077,7 +686,7 @@
             <a href="https://www.linkedin.com/in/shivaganesh6" target="_blank" rel="noopener" class="icon-link" title="LinkedIn Profile">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
-            <a href="https://www.credly.com/users/shivaganesh22" target="_blank" rel="noopener" class="icon-link" title="Credly Badges">
+            <a href="https://www.credly.com/users/shivaganesh22" target="_blank" rel="noopener" class="icon-link" title="Credly Profile">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
             </a>
             <a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank" rel="noopener" class="icon-link" title="Certificates Google Drive">
@@ -1089,7 +698,7 @@
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="#flagships">RSGMovies & Flagships</a></li>
+            <li><a href="#flagships">Flagship Systems</a></li>
             <li><a href="#iam-studio">IAM Architecture Studio</a></li>
             <li><a href="#security-labs">Security & Systems Labs</a></li>
             <li><a href="#projects-grid-section">All Projects Archive</a></li>
@@ -1098,12 +707,12 @@
         </div>
 
         <div class="footer-col">
-          <h4>Verification & Domains</h4>
+          <h4>Verification & Domain</h4>
           <ul class="footer-links-list">
-            <li><a href="https://shivaganesh.net" target="_blank">Primary: shivaganesh.net</a></li>
-            <li><a href="https://sg22.me" target="_blank">Legacy: sg22.me</a></li>
+            <li><a href="https://shivaganesh.net" target="_blank">Primary Domain: shivaganesh.net</a></li>
             <li><a href="https://www.credly.com/users/shivaganesh22" target="_blank">Credly Profile Verified</a></li>
-            <li><a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank">Official Drive Certificates</a></li>
+            <li><a href="https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5" target="_blank">Official Drive Certificates & Resumes</a></li>
+            <li><a href="mailto:dornalashivaganesh0@gmail.com">dornalashivaganesh0@gmail.com</a></li>
           </ul>
         </div>
       </div>
@@ -1112,7 +721,6 @@
         <span>© 2026 Shiva Ganesh (Dornala Shiva Ganesh). All Rights Reserved.</span>
         <div class="footer-domains">
           <span class="domain-pill">shivaganesh.net</span>
-          <span class="domain-pill">sg22.me</span>
         </div>
       </div>
     </div>

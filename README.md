@@ -1,7 +1,6 @@
 # Shiva Ganesh — Professional Portfolio Website
 
-> **Software Developer · Enterprise IAM · Application Security & Systems**
-> Primary Domain: [shivaganesh.net](https://shivaganesh.net) · Legacy: [sg22.me](https://sg22.me) · GitHub: [@shivaganesh22](https://github.com/shivaganesh22)
+> Primary Domain: [shivaganesh.net](https://shivaganesh.net) · GitHub: [@shivaganesh22](https://github.com/shivaganesh22)
 
 ---
 
