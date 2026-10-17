@@ -7,6 +7,18 @@
 const GOOGLE_DRIVE_FOLDER = "https://drive.google.com/drive/folders/1fFWOkMl8EO72BnRldHPPbFqdkQEyvNF5";
 
 const ALL_CREDENTIALS = [
+  // CyberArk Professional Certification
+  {
+    name: "CyberArk Certified Defender — Privileged Access Management (PAM)",
+    issuer: "CyberArk",
+    category: "security",
+    issued_at: "2026-02-07",
+    url: "assets/docs/Defender_PAM.pdf",
+    drive_url: GOOGLE_DRIVE_FOLDER,
+    image: "assets/badges/defender_pam.jpg",
+    remote_image: null,
+    skills: ["CyberArk Core", "Vault & PVWA", "CPM & PSM", "Privileged Access Management", "Access Security"]
+  },
   // Google Cloud & AI (from credly.json)
   {
     name: "Certified Partner Specialist Gemini Enterprise Agent Development",

@@ -110,22 +110,13 @@
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <!-- Elevated Top GitHub Profile Bar -->
-          <div class="hero-github-lead-card">
-            <a href="https://github.com/shivaganesh22" target="_blank" rel="noopener" class="hero-gh-chip" onclick="window.soundEngine?.playClick()">
-              <img src="https://avatars.githubusercontent.com/u/71806997?v=4" alt="Dornala Shiva Ganesh" class="gh-avatar-mini" />
-              <div class="gh-info-mini">
-                <span class="gh-handle">github.com/shivaganesh22</span>
-                <span class="gh-status">Public & Monorepo Repositories ↗</span>
-              </div>
-              <span class="gh-pro-tag">PRO</span>
-            </a>
+          <div class="hero-badge-wrap">
             <div class="status-pill">
               <span class="pulse-dot"></span>
               <span>IAM Associate · PwC Cyber Risk & Regulatory</span>
             </div>
             <div class="role-pill">
-              <span>⚡ Full-Stack & Systems Security</span>
+              <span>⚡ Full-Stack Developer & Security Engineer</span>
             </div>
           </div>
 
@@ -346,29 +337,31 @@
             </div>
           </div>
 
-          <!-- Card 2: Android Internals & Reverse Engineering -->
+          <!-- Card 2: Reverse Engineering & Android Internals -->
           <div class="skill-category-card" data-tilt>
             <div class="skill-card-header">
               <div class="skill-category-icon" style="color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.3); background: rgba(0, 242, 254, 0.08);">
                 🔓
               </div>
               <div>
-                <h3 class="skill-category-title">Android Internals & Reverse Eng.</h3>
-                <span class="mono text-muted" style="font-size: 0.75rem;">// RUNTIME HOOKING & FIRMWARE</span>
+                <h3 class="skill-category-title">Reverse Engineering & Mobile Internals</h3>
+                <span class="mono text-muted" style="font-size: 0.75rem;">// DYNAMIC HOOKING, SMALI PATCHING & FIRMWARE</span>
               </div>
             </div>
             <p class="skill-category-desc">
-              Firmware-level mobile manipulation, bootloader unlocking, root customization, DEX/Smali patching, and dynamic client-side security bypasses.
+              Deep reverse engineering and mobile internals: APK decompilation via APKTool and JADX, DEX/Smali bytecode instrumentation, runtime method hooking via Frida and Objection, SSL pinning bypass, bootloader unlocking (Fastboot/ADB), custom ROM and recovery flashing (TWRP/OrangeFox), Android rooting (Magisk/KernelSU/Zygisk cloaking), app binning, and subscription/payment logic analysis.
             </p>
             <div class="skill-tags-cloud">
+              <span class="skill-pill-badge highlight">Reverse Engineering (Smali & DEX)</span>
+              <span class="skill-pill-badge highlight">APKTool & JADX Decompilation</span>
+              <span class="skill-pill-badge highlight">Runtime Hooking (Frida & Objection)</span>
+              <span class="skill-pill-badge highlight">SSL Pinning Bypass</span>
+              <span class="skill-pill-badge highlight">App Binning & Free Trial Bypasses</span>
+              <span class="skill-pill-badge highlight">Payment & Subscription Logic Analysis</span>
               <span class="skill-pill-badge highlight">Bootloader Unlocking (Fastboot/ADB)</span>
               <span class="skill-pill-badge highlight">Custom ROMs & Recovery (TWRP / OrangeFox)</span>
               <span class="skill-pill-badge highlight">Android Rooting (Magisk / KernelSU)</span>
               <span class="skill-pill-badge highlight">Zygisk & Root Cloaking</span>
-              <span class="skill-pill-badge highlight">APK Modding & Smali Instrumentation</span>
-              <span class="skill-pill-badge highlight">SSL Pinning Bypass (Frida / Objection)</span>
-              <span class="skill-pill-badge highlight">App Binning & Free Trial Bypasses</span>
-              <span class="skill-pill-badge highlight">Payment Logic & Subscription Analysis</span>
             </div>
           </div>
 
@@ -379,23 +372,25 @@
                 🛡️
               </div>
               <div>
-                <h3 class="skill-category-title">Enterprise IAM & Active Directory (AD)</h3>
-                <span class="mono text-muted" style="font-size: 0.75rem;">// AD DS, AUDITING & PAM GOVERNANCE (PwC)</span>
+                <h3 class="skill-category-title">Enterprise IAM, PAM & Active Directory (AD)</h3>
+                <span class="mono text-muted" style="font-size: 0.75rem;">// DELINEA SECRET SERVER, CYBERARK PAM & AD DS</span>
               </div>
             </div>
             <p class="skill-category-desc">
-              On-prem Active Directory Domain Services (AD DS) administration: Users, Groups, OUs, Domain Controller (DC) promotion, and Group Policy Objects (GPO partial). Enterprise event auditing with Quest Change Auditor and Splunk SIEM log indexing. Microsoft Entra ID and Okta cloud federation, SCIM user provisioning, and CyberArk PAM privileged secret management.
+              Enterprise Privileged Access Management (PAM) across Delinea Secret Server and CyberArk. On-prem Active Directory Domain Services (AD DS) administration: Users, Groups, OUs, Domain Controller (DC) promotion, and Group Policy Objects (GPO partial). Enterprise security log auditing with Quest Change Auditor and Splunk SIEM log indexing. Cloud identity governance across Microsoft Entra ID and Okta (SAML 2.0, OIDC, SCIM, Conditional Access, Graph API automation).
             </p>
             <div class="skill-tags-cloud">
+              <span class="skill-pill-badge iam">Delinea Secret Server</span>
+              <span class="skill-pill-badge iam">CyberArk Certified Defender PAM</span>
+              <span class="skill-pill-badge iam">CyberArk PAM (Vault, PVWA, CPM, PSM, CCP)</span>
               <span class="skill-pill-badge iam">Active Directory (AD DS)</span>
               <span class="skill-pill-badge iam">Users, Groups & OUs</span>
               <span class="skill-pill-badge iam">DC Promotion & DNS</span>
               <span class="skill-pill-badge iam">Group Policy Objects (GPO partial)</span>
-              <span class="skill-pill-badge iam">Change Auditor Logs</span>
-              <span class="skill-pill-badge iam">Splunk SIEM (Log Indexing)</span>
+              <span class="skill-pill-badge iam">Quest Change Auditor Logs</span>
+              <span class="skill-pill-badge iam">Splunk SIEM (Log Indexing & Analysis)</span>
               <span class="skill-pill-badge iam">Microsoft Entra ID (Azure AD)</span>
               <span class="skill-pill-badge iam">Okta Identity Cloud</span>
-              <span class="skill-pill-badge iam">CyberArk PAM (Vault, PVWA, CPM, PSM)</span>
               <span class="skill-pill-badge iam">SAML 2.0 & OIDC Federation</span>
               <span class="skill-pill-badge iam">SCIM Automated Provisioning & JIT</span>
               <span class="skill-pill-badge iam">PowerShell & Python IAM Automation</span>
@@ -596,15 +591,16 @@
               <ul class="timeline-body-list">
                 <li>Hands-on deployment and configuration of <strong>CyberArk</strong> core components: Vault, PVWA, CPM, PSM, and HTML5 Gateway.</li>
                 <li>Implemented <strong>Central Credential Provider (CCP)</strong> for secure programmatic credential injection in automated processes.</li>
-                <li>Configured automated password rotation policies via CPM, enabled session monitoring through PSM, and managed privileged account lifecycles in <strong>Delinea Secret Server</strong>.</li>
+                <li>Earned <strong>CyberArk Certified Defender — Privileged Access Management (PAM)</strong> certification (February 2026).</li>
+                <li>In <strong>Delinea Secret Server</strong>, managed privileged account lifecycle: onboarded accounts, configured automated password rotation policies, heartbeat validation, and enabled session connections to enforce access control and monitor privileged activity.</li>
                 <li>Received PwC Advisory Attachment Certificate of Appreciation (August 2025).</li>
               </ul>
               <div class="timeline-tools-strip">
+                <span class="tech-chip">CyberArk Certified Defender PAM</span>
                 <span class="tech-chip">CyberArk Core</span>
-                <span class="tech-chip">CPM</span>
-                <span class="tech-chip">PSM</span>
-                <span class="tech-chip">CCP</span>
                 <span class="tech-chip">Delinea Secret Server</span>
+                <span class="tech-chip">CPM & PSM</span>
+                <span class="tech-chip">CCP</span>
               </div>
             </div>
           </div>
@@ -716,7 +712,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Shiva Ganesh (Dornala Shiva Ganesh). All Rights Reserved.</span>
+        <span>© 2026 Shiva Ganesh (Dornala Shiva Ganesh). All Rights Reserved. · Built with Anti gravity</span>
         <div class="footer-domains">
           <span class="domain-pill">shivaganesh.net</span>
         </div>
