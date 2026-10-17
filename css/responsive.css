@@ -1,0 +1,161 @@
+/* ==========================================================================
+   SHIVA GANESH PORTFOLIO - RESPONSIVE & ACCESSIBILITY STYLESHEET
+   Mobile, Tablet, Large screens, and prefers-reduced-motion
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .hero-visual {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .flagship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flagship-media-side {
+    border-right: none;
+    border-bottom: 1px solid var(--bg-glass-border);
+  }
+
+  .simulator-controls-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: rgba(6, 9, 18, 0.98);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+    flex-direction: column;
+    padding: 28px 24px;
+    gap: 20px;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .projects-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .projects-search-box {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .protocol-sequence-flow {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .flow-connector {
+    width: 2px;
+    height: 30px;
+    min-width: 2px;
+    background: linear-gradient(180deg, rgba(0, 242, 254, 0.2), rgba(0, 242, 254, 0.8), rgba(0, 242, 254, 0.2));
+  }
+
+  .flow-connector::after {
+    animation: move-arrow-vertical 2s infinite linear;
+  }
+
+  @keyframes move-arrow-vertical {
+    0% { top: 10%; opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { top: 90%; opacity: 0.2; }
+  }
+
+  .simulator-controls-card {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .floating-shield-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .flagship-content-side {
+    padding: 24px;
+  }
+
+  .iam-studio-box {
+    padding: 20px;
+  }
+
+  .terminal-window {
+    height: 85vh;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
