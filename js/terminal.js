@@ -38,10 +38,11 @@ Expertise: Multi-platform applications, low-level Android reverse engineering, o
       experience: () => `
 <strong>Professional Experience:</strong>
 1. <span class="text-cyan">IAM Associate — PwC (Cyber Risk & Regulatory / Access Management)</span> [Aug 2025 - Present]
-   - Managed users, groups, roles across Okta and Microsoft Entra ID.
+   - Administered Active Directory (AD DS): Users, Groups, OUs, Domain Controller (DC) promotion, and GPO (partial).
+   - Monitored enterprise authentication logs via Quest Change Auditor and Splunk SIEM.
+   - Managed cloud identities, groups, and RBAC across Microsoft Entra ID and Okta.
    - Configured Conditional Access (MFA enforcement, sign-in risk, location rules, device compliance).
-   - Created enterprise applications using SAML 2.0, OIDC/OAuth, SCIM / JIT provisioning.
-   - Scripted automated application onboarding into Entra ID.
+   - Engineered automated application onboarding (app_onboarding) into Entra ID using ServiceNow RITM tickets.
 2. <span class="text-cyan">IAM Intern — PwC (Privileged Access Management - PAM)</span> [Feb 2025 - Aug 2025]
    - Deployed and configured CyberArk Vault, PVWA, CPM, PSM, HTML5 Gateway.
    - Implemented Central Credential Provider (CCP) for secure credential injection.
@@ -49,47 +50,53 @@ Expertise: Multi-platform applications, low-level Android reverse engineering, o
 3. <span class="text-cyan">National Apprenticeship Certificate: Software Programmer (V1)</span> [Score: 94.8%, 40 Credits]
       `,
       projects: () => `
-<strong>Flagship Projects & Live Repository Links:</strong>
-1. <span class="text-cyan">RSGMovies Multi-Platform Streaming Platform</span>:
-   - Live: <a href="https://rsg-movies.vercel.app" target="_blank" class="text-emerald">rsg-movies.vercel.app</a>
-   - React Web: <a href="https://github.com/shivaganesh22/rsgmovies-vite" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies-vite</a>
-   - Android TV: <a href="https://github.com/shivaganesh22/rsgmovies-android-app" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies-android-app</a>
-   - Django Backend: <a href="https://github.com/shivaganesh22/rsgmovies-backend" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies-backend</a>
-   - Seedr Scraper: <a href="https://github.com/shivaganesh22/seed" target="_blank" class="text-cyan">github.com/shivaganesh22/seed</a>
-   - FCM Push Daemon: <a href="https://github.com/shivaganesh22/rsgmovies_fcm" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies_fcm</a>
-2. <span class="text-cyan">Auto-Send: Instagram Comment & DM Automation SaaS</span>:
+<strong>Flagship Projects & Live Monorepo Deployments:</strong>
+1. <span class="text-cyan">RSGMovies Multi-Screen Ecosystem (Monorepo)</span>:
+   - Live Frontend: <a href="https://rsgmovies.com" target="_blank" class="text-emerald">rsgmovies.com</a>
+   - Live Backend: <a href="https://rsg-movies.vercel.app" target="_blank" class="text-emerald">rsg-movies.vercel.app</a>
+   - Monorepo: <a href="https://github.com/shivaganesh22/rsgmovies" target="_blank" class="text-cyan">github.com/shivaganesh22/rsgmovies</a>
+   - Scrapers: Movierulz, TamilMV, MovieBlast, iStreamflare, Torrent Search, YouTube, iBOMMA, MovierulzHD, Seedr
+2. <span class="text-cyan">Auto-Send: Instagram Comment & DM SaaS</span>:
+   - Live: <a href="https://rsgflow.vercel.app" target="_blank" class="text-emerald">rsgflow.vercel.app</a>
    - GitHub: <a href="https://github.com/shivaganesh22/Auto-Send" target="_blank" class="text-cyan">github.com/shivaganesh22/Auto-Send</a>
-3. <span class="text-cyan">Hybrid ML Image Deduplication (AIMLA 2025 Paper #455)</span>:
-   - GitHub: <a href="https://github.com/shivaganesh22/deduplication" target="_blank" class="text-cyan">github.com/shivaganesh22/deduplication</a>
-4. <span class="text-cyan">FixItNow: Civic Grievance & Complaint Mobile App</span>:
-   - GitHub: <a href="https://github.com/shivaganesh22/fixitnow-app" target="_blank" class="text-cyan">github.com/shivaganesh22/fixitnow-app</a>
-5. <span class="text-cyan">AUpulse Automated Attendance (Flutter + OpenCV Face Matching)</span>:
-   - Mobile: <a href="https://github.com/shivaganesh22/aupulse_app" target="_blank" class="text-cyan">github.com/shivaganesh22/aupulse_app</a>
-   - CV Engine: <a href="https://github.com/shivaganesh22/aupulse_cv" target="_blank" class="text-cyan">github.com/shivaganesh22/aupulse_cv</a>
-6. <span class="text-cyan">Ecommerce with Anti-Fraud QR Verification</span>:
-   - Live: <a href="https://ecommerce0.pythonanywhere.com" target="_blank" class="text-emerald">ecommerce0.pythonanywhere.com</a>
-   - GitHub: <a href="https://github.com/shivaganesh22/ecommerce" target="_blank" class="text-cyan">github.com/shivaganesh22/ecommerce</a>
-7. <span class="text-cyan">AppLock Multi-Biometric Authenticator</span>:
-   - GitHub: <a href="https://github.com/shivaganesh22/applock" target="_blank" class="text-cyan">github.com/shivaganesh22/applock</a>
-8. <span class="text-cyan">Cinemate React Movie Discovery</span>:
-   - GitHub: <a href="https://github.com/shivaganesh22/cinemate" target="_blank" class="text-cyan">github.com/shivaganesh22/cinemate</a>
-9. <span class="text-cyan">Placement Management System (PMS)</span>:
-   - Live: <a href="https://pms0.pythonanywhere.com/" target="_blank" class="text-emerald">pms0.pythonanywhere.com</a>
-   - GitHub: <a href="https://github.com/shivaganesh22/pms" target="_blank" class="text-cyan">github.com/shivaganesh22/pms</a>
-10. <span class="text-cyan">Admission Management System (AMS)</span>:
-    - Live: <a href="https://amsproject00.pythonanywhere.com" target="_blank" class="text-emerald">amsproject00.pythonanywhere.com</a>
-    - GitHub: <a href="https://github.com/shivaganesh22/amsproject" target="_blank" class="text-cyan">github.com/shivaganesh22/amsproject</a>
+3. <span class="text-cyan">Price Tracker Distributed Monitor (Monorepo)</span>:
+   - Live Frontend: <a href="https://rsgtracker.vercel.app" target="_blank" class="text-emerald">rsgtracker.vercel.app</a>
+   - Live Backend: <a href="https://rsg-price.vercel.app" target="_blank" class="text-emerald">rsg-price.vercel.app</a>
+   - Monorepo: <a href="https://github.com/shivaganesh22/price-tracker" target="_blank" class="text-cyan">github.com/shivaganesh22/price-tracker</a>
+4. <span class="text-cyan">AUpulse Automated Attendance System (Monorepo)</span>:
+   - Live API: <a href="https://aupulse-api.vercel.app" target="_blank" class="text-emerald">aupulse-api.vercel.app</a>
+   - Live CV: <a href="https://aupulse-cv.vercel.app" target="_blank" class="text-emerald">aupulse-cv.vercel.app</a>
+   - Monorepo: <a href="https://github.com/shivaganesh22/mini-project" target="_blank" class="text-cyan">github.com/shivaganesh22/mini-project</a>
+5. <span class="text-cyan">Hybrid ML Image Deduplication (AIMLA 2025 Paper #455)</span>:
+   - Monorepo: <a href="https://github.com/shivaganesh22/major-project" target="_blank" class="text-cyan">github.com/shivaganesh22/major-project</a>
+6. <span class="text-cyan">Automated Enterprise App Onboarding (PwC)</span>:
+   - GitHub: <a href="https://github.com/shivaganesh22/app_onboarding" target="_blank" class="text-cyan">github.com/shivaganesh22/app_onboarding</a>
+7. <span class="text-cyan">FixItNow: Civic Grievance & Complaint Mobile App</span>:
+   - GitHub: <a href="https://github.com/shivaganesh22/fixit-now" target="_blank" class="text-cyan">github.com/shivaganesh22/fixit-now</a>
+8. <span class="text-cyan">Wardobe: P2P Outfit Rental & Fashion Platform</span>:
+   - GitHub: <a href="https://github.com/shivaganesh22/wardobe" target="_blank" class="text-cyan">github.com/shivaganesh22/wardobe</a>
+9. <span class="text-cyan">Chart Generator: Interactive Visual Canvas Studio</span>:
+   - GitHub: <a href="https://github.com/shivaganesh22/chart-generator" target="_blank" class="text-cyan">github.com/shivaganesh22/chart-generator</a>
+10. <span class="text-cyan">AppLock Multi-Biometric Authenticator</span>:
+    - GitHub: <a href="https://github.com/shivaganesh22/applock" target="_blank" class="text-cyan">github.com/shivaganesh22/applock</a>
+11. <span class="text-cyan">PwC Enterprise IAM & Zero-Trust MFA Portal</span>:
+    - GitHub: <a href="https://github.com/shivaganesh22/pwc" target="_blank" class="text-cyan">github.com/shivaganesh22/pwc</a>
+12. <span class="text-cyan">Full-Stack Assessment: Django REST API & React Studio</span>:
+    - GitHub: <a href="https://github.com/shivaganesh22/21EG112B26" target="_blank" class="text-cyan">github.com/shivaganesh22/21EG112B26</a>
+13. <span class="text-cyan">Ecommerce with Anti-Fraud QR Verification</span>:
+    - Live: <a href="https://ecommerce0.pythonanywhere.com" target="_blank" class="text-emerald">ecommerce0.pythonanywhere.com</a>
+    - GitHub: <a href="https://github.com/shivaganesh22/ecommerce" target="_blank" class="text-cyan">github.com/shivaganesh22/ecommerce</a>
       `,
       skills: () => `
 <strong>Technical Capabilities & Core Arsenal:</strong>
 - <span class="text-cyan">Offensive Security & Pentesting:</span>
-  Kali Linux, Burp Suite (MitM / Traffic Interception), Hydra (Credential Brute-Forcing), SQL Injection (Manual In-Band / Blind & SQLmap), WiFi Pentesting (Aircrack-ng, Wifite, WPA2 Deauth, Handshake Cracking), Metasploit, Nmap, Wireshark, OWASP Top 10.
+  Android & Windows hacking, Remote Access Trojan (RAT) creation & payload injection, process injection, AMSI & AV evasion, Kali Linux, Burp Suite (MitM / Traffic Interception), Hydra (Credential Brute-Forcing), SQL Injection (Manual In-Band / Blind & SQLmap), WiFi Pentesting (Aircrack-ng, Wifite, WPA2 Deauth, Handshake Cracking), Metasploit, Nmap, Wireshark.
 - <span class="text-cyan">Android Internals & Reverse Engineering:</span>
   Bootloader Unlocking (Fastboot/ADB), Rooting (Magisk, KernelSU, Zygisk), Custom Recovery (TWRP, OrangeFox), Custom ROM Flashing, APK Modding & Smali Instrumentation, SSL Pinning Bypass (Frida / Objection / JustTrustMe), App Binning & Free Trial Bypasses, Payment Logic Analysis.
-- <span class="text-cyan">Enterprise IAM:</span>
-  Microsoft Entra ID, Okta Identity Cloud, CyberArk PAM (Vault, PVWA, CPM, PSM, CCP), SAML 2.0, OAuth 2.0, OIDC, SCIM Automated Provisioning, Zero-Trust Conditional Access, Role-Based Access Control (RBAC).
+- <span class="text-cyan">Enterprise IAM & Active Directory:</span>
+  Active Directory (AD DS), Users/Groups/OUs, DC Promotion, GPOs (partial), Change Auditor, Splunk SIEM, Microsoft Entra ID, Okta Identity Cloud, CyberArk PAM (Vault, PVWA, CPM, PSM, CCP), SAML 2.0, OAuth 2.0, OIDC, SCIM Automated Provisioning, Zero-Trust Conditional Access, Role-Based Access Control (RBAC).
 - <span class="text-cyan">Software & App Development:</span>
-  Python (Django 5, DRF, Flask), ReactJS, Vite, Flutter (Dart), Native Android (Java/Kotlin), Android TV (Leanback), Node.js, Express, Tailwind CSS, PostgreSQL, MySQL, SQLite, Firebase.
+  Python (Django 5, DRF, Flask), ReactJS 18, Vite, Flutter (Dart), Native Android (Java/Kotlin), Android TV (Leanback), Node.js, Express, Tailwind CSS, PostgreSQL, MySQL, SQLite, Firebase.
 - <span class="text-cyan">Cloud & AI/ML:</span>
   PyTorch, TensorFlow, OpenCV, MediaPipe (Face Mesh), Librosa, XGBoost, Published Paper (AIMLA 2025 #455), AWS Compute, Google Cloud, Vercel, PythonAnywhere, Bash & Linux Sysadmin.
       `,

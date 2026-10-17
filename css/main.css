@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-gradient {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -230,7 +231,6 @@ section {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  group: true;
 }
 
 .brand-icon-box {
@@ -400,8 +400,8 @@ section {
    ========================================================================== */
 .hero-section {
   min-height: 100vh;
-  padding-top: calc(var(--nav-height) + 40px);
-  padding-bottom: 80px;
+  padding-top: calc(var(--nav-height) + 16px);
+  padding-bottom: 70px;
   display: flex;
   align-items: center;
   position: relative;
@@ -410,8 +410,8 @@ section {
 .hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.85fr;
-  gap: 60px;
-  align-items: center;
+  gap: 48px;
+  align-items: flex-start;
 }
 
 .hero-badge-wrap {
@@ -636,7 +636,8 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 8px;
 }
 
 .identity-card-wrap {

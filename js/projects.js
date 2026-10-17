@@ -1,7 +1,7 @@
 /* ==========================================================================
-   SHIVA GANESH PORTFOLIO - ACCURATE PROJECT INVENTORY
-   Public & Private Repositories, Live Deployments, Features & Tech Stacks.
-   NO API endpoints/details clutter — Clear explanations of what it has & techstack used.
+   SHIVA GANESH PORTFOLIO - ACCURATE MONOREPOS & VERIFIED DEPLOYMENTS
+   Consolidated Monorepos, Verified Vercel Deployments & Scraper Pipelines.
+   NO API endpoint dumps — Clear explanations of what each system has & tech stack used.
    ========================================================================== */
 
 const PROJECTS_DATA = {
@@ -9,43 +9,73 @@ const PROJECTS_DATA = {
     {
       id: "rsgmovies",
       category: "web_mobile",
-      badge: "Multi-Platform Media Ecosystem",
+      badge: "Flagship Monorepo · Multi-Screen Ecosystem",
       title: "RSGMovies Distributed Streaming Platform",
       subtitle: "Django REST API · React Web · Android TV · Flutter Mobile · Seedr Cloud",
-      liveUrl: "https://rsg-movies.vercel.app",
-      githubUrl: "https://github.com/shivaganesh22/rsgmovies-vite",
-      subRepos: [
-        { label: "React Web (Vite)", url: "https://github.com/shivaganesh22/rsgmovies-vite" },
-        { label: "Android TV App", url: "https://github.com/shivaganesh22/rsgmovies-android-app" },
-        { label: "Django Backend", url: "https://github.com/shivaganesh22/rsgmovies-backend" },
-        { label: "Cloud Scraper (Seedr)", url: "https://github.com/shivaganesh22/seed" },
-        { label: "Flutter Client", url: "https://github.com/shivaganesh22/rsgmovies" },
-        { label: "FCM Push Daemon", url: "https://github.com/shivaganesh22/rsgmovies_fcm" }
-      ],
-      whatItHas: "A complete distributed media streaming ecosystem engineered for multi-screen consumption (Web, Android TV, and Mobile). Features automated cloud torrent scraping via Seedr, 1080p/4K multi-resolution playback, a built-in YouTube video downloader, automated movie scrapers (TamilMV), HMAC-SHA256 signed stream proxying to protect upstream sources, and a real-time Node.js FCM push notification daemon alerting users when new movies are uploaded.",
+      liveUrl: "https://rsgmovies.com",
+      liveBackendUrl: "https://rsg-movies.vercel.app",
+      githubUrl: "https://github.com/shivaganesh22/rsgmovies",
+      monorepoTag: "Consolidated Monorepo (Web + TV + Backend + Scrapers + FCM)",
+      whatItHas: "A complete distributed media streaming and cloud transcoding ecosystem engineered for multi-screen consumption (Web, Android TV, and Mobile). Scrapes and aggregates high-definition streams and magnet links from Movierulz, TamilMV, MovieBlast, iStreamflare, Torrent Search Engine, YouTube Downloader, iBOMMA, MovierulzHD, and Seedr Cloud Transcoder. Features HMAC-SHA256 signed backend stream proxying to protect upstream sources, custom 10-foot Android TV UI with spatial D-pad focus handling, and a real-time Node.js FCM push notification daemon alerting users when new releases are indexed.",
       keyFeatures: [
-        { title: "Android TV 10-Foot UI", desc: "Custom TV UI built with spatial D-pad focus handling, remote navigation, and video player controls optimized for living room displays." },
-        { title: "Cloud Stream Pipeline", desc: "Seedr API integration for remote torrent extraction and cloud transcode, bypassing local client download requirements." },
-        { title: "Automated Push Daemon", desc: "Node.js background cron worker connected to PostgreSQL firing instant Firebase Cloud Messaging (FCM) notifications on releases." }
+        { title: "Multi-Source Scraper Engine", desc: "Automated real-time scrapers for Movierulz, TamilMV, MovieBlast, iStreamflare, iBOMMA, MovierulzHD, and Torrent Search." },
+        { title: "Cloud Stream & Seedr Transcode", desc: "Seedr API cloud torrent downloading and remote multi-resolution transcode pipeline with built-in YouTube video downloader." },
+        { title: "Android TV 10-Foot Spatial UI", desc: "Living room TV interface optimized for remote control D-pad navigation, Leanback focus management, and hardware video playback." },
+        { title: "Push Notification Daemon", desc: "Node.js background cron worker connected to PostgreSQL broadcasting instant Firebase Cloud Messaging (FCM) release alerts." }
       ],
-      tech: ["Django REST Framework", "ReactJS (Vite)", "Android TV", "Flutter", "Node.js", "Seedr API", "Firebase Cloud Messaging", "PostgreSQL", "Vercel", "HMAC-SHA256"]
+      tech: ["Django REST Framework", "ReactJS 18", "Android TV (Leanback)", "Flutter", "Node.js", "Seedr API", "Firebase Cloud Messaging", "PostgreSQL", "Vercel", "HMAC-SHA256"]
     },
     {
       id: "auto-send",
       category: "web_mobile",
-      badge: "SaaS Webhook Automation",
+      badge: "SaaS Platform · Live on Vercel",
       title: "Auto-Send: Instagram Comment & DM Automation SaaS",
       subtitle: "Django 5 · Meta Graph API v26.0 · Webhooks · Alpine.js · Tailwind",
-      liveUrl: null,
+      liveUrl: "https://rsgflow.vercel.app",
       githubUrl: "https://github.com/shivaganesh22/Auto-Send",
-      subRepos: [],
       whatItHas: "A production-grade social automation SaaS that monitors incoming Instagram comments in real time via Meta Graph API v26.0 webhooks. When users trigger specific keywords, the platform automatically dispatches contextual public replies and private DMs with download links or resources. Built with SHA-256 HMAC webhook verification, comment deduplication by ID to prevent duplicate messages, follower gating (verifies the user is following before delivering bonuses), and built-in latency analytics.",
       keyFeatures: [
         { title: "Zero-Duplicate Idempotency", desc: "Strict comment_id tracking with SHA-256 HMAC challenge validation ensures each user receives exactly one response." },
         { title: "Follower Gating Pipeline", desc: "Automated API check verifying account follow status before unlocking private resources or bonus downloads." },
         { title: "Real-time Metrics Dashboard", desc: "Built with Chart.js and Alpine.js tracking API response times, dispatch success rates, and exportable CSV audit logs." }
       ],
-      tech: ["Django 5", "Python", "Meta Graph API v26.0", "Webhooks", "HMAC-SHA256", "Alpine.js", "Chart.js", "Tailwind CSS"]
+      tech: ["Django 5", "Python", "Meta Graph API v26.0", "Webhooks", "HMAC-SHA256", "Alpine.js", "Chart.js", "Tailwind CSS", "Vercel"]
+    },
+    {
+      id: "price-tracker",
+      category: "web_mobile",
+      badge: "Monorepo · Live Full-Stack System",
+      title: "Price Tracker: Distributed E-Commerce Monitor",
+      subtitle: "React 18 Frontend · Django REST Backend · Firebase · Vercel",
+      liveUrl: "https://rsgtracker.vercel.app",
+      liveBackendUrl: "https://rsg-price.vercel.app",
+      githubUrl: "https://github.com/shivaganesh22/price-tracker",
+      monorepoTag: "Consolidated Monorepo (Frontend + Backend)",
+      whatItHas: "Distributed e-commerce price monitoring platform tracking product price histories across major shopping platforms in real time. Features a React 18 responsive frontend deployed on Vercel, a high-performance Django REST Framework API engine, and Firebase integration to monitor fluctuations and dispatch instant alerts when products hit user-defined price thresholds.",
+      keyFeatures: [
+        { title: "Live Price Scraping & Tracking", desc: "Automated web scrapers tracking pricing trends, discounts, and historical price minimums across e-commerce portals." },
+        { title: "Dual Cloud Microservices", desc: "Independent production deployments on Vercel: Frontend (rsgtracker.vercel.app) and REST Backend (rsg-price.vercel.app)." },
+        { title: "Instant Alert Dispatch", desc: "Firebase-integrated notification pipeline alerting users when products drop below their target price thresholds." }
+      ],
+      tech: ["React 18", "Django REST Framework", "Python", "Firebase", "Tailwind CSS", "Vercel"]
+    },
+    {
+      id: "aupulse-attendance",
+      category: "web_mobile",
+      badge: "Monorepo · CCTV Computer Vision",
+      title: "AUpulse Automated Attendance Management System",
+      subtitle: "Flutter Mobile App + OpenCV CCTV Facial Recognition + Django REST API",
+      liveUrl: "https://aupulse-api.vercel.app",
+      liveBackendUrl: "https://aupulse-cv.vercel.app",
+      githubUrl: "https://github.com/shivaganesh22/mini-project",
+      monorepoTag: "Consolidated Monorepo (aupulse_app + aupulse_cv + aupulse-miniproject)",
+      whatItHas: "An end-to-end automated attendance management platform integrated with classroom CCTV cameras and academic timetables. The system matches video streams against enrolled student facial embeddings in real time and automatically records attendance, completely eliminating manual roll-call and proxy attendance.",
+      keyFeatures: [
+        { title: "Real-Time Face Matching", desc: "CCTV facial recognition pipeline (deployed on aupulse-cv.vercel.app) matching video feeds against enrolled biometric profiles." },
+        { title: "Proxy-Proof Attendance", desc: "Tamper-resistant automated logging matched directly against class schedules, subject models, and room timetables." },
+        { title: "Flutter Student Client", desc: "Cross-platform mobile client allowing students and faculty to review real-time presence percentages, analytics, and shortage warnings." }
+      ],
+      tech: ["Flutter / Dart", "OpenCV", "Facial Recognition", "Django REST API", "Python", "PostgreSQL", "Vercel"]
     },
     {
       id: "deduplication",
@@ -54,15 +84,31 @@ const PROJECTS_DATA = {
       title: "Hybrid ML Model for Image Deduplication & Storage Optimization",
       subtitle: "PyTorch · ResNet / EfficientNet / MobileNet · Perceptual Hashing · AIMLA 2025",
       liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/deduplication",
-      subRepos: [],
+      githubUrl: "https://github.com/shivaganesh22/major-project",
+      monorepoTag: "Major Project Monorepo (Models + Benchmarks + Paper)",
       whatItHas: "Published machine learning research presented at the 3rd International Conference on Artificial Intelligence and Machine Learning Applications (AIMLA 2025, Paper ID #455). Formulates a hybrid feature extraction and perceptual hashing architecture to detect near-duplicate, cropped, resized, or filtered visual media at scale, significantly reducing redundant cloud storage consumption.",
       keyFeatures: [
         { title: "AIMLA 2025 Paper #455", desc: "Co-authored and published conference paper on hybrid deep learning models for enterprise image deduplication." },
         { title: "Hybrid Feature Extraction", desc: "Combines deep embeddings from ResNet, EfficientNet, and MobileNet with fast perceptual hashing (dHash/pHash) for optimal accuracy and speed." },
-        { title: "Storage Savings", desc: "Dramatically cuts redundant storage footprints across cloud media archives by detecting duplicate images even through post-processing modifications." }
+        { title: "Cloud Storage Optimization", desc: "Cuts redundant storage footprints across cloud media archives by detecting duplicate images even through post-processing modifications." }
       ],
       tech: ["PyTorch", "TensorFlow", "ResNet", "EfficientNet", "MobileNet", "OpenCV", "Perceptual Hashing (pHash)", "Django"]
+    },
+    {
+      id: "app-onboarding",
+      category: "iam_security",
+      badge: "Enterprise IAM Automation (PwC)",
+      title: "Automated Enterprise App Onboarding & Entra ID Governance",
+      subtitle: "ServiceNow RITM Automation · Microsoft Entra ID · Okta · PowerShell / Python",
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/app_onboarding",
+      whatItHas: "Enterprise identity onboarding automation portal developed to streamline SaaS and custom application provisioning into Microsoft Entra ID and Okta. Ingests ServiceNow RITM tickets, validates metadata against XML schema profiles, and uses the Microsoft Graph API client to programmatically configure SAML 2.0 / OIDC single sign-on, attribute claims mappings, SCIM provisioning, and Conditional Access zero-trust baselines.",
+      keyFeatures: [
+        { title: "ServiceNow RITM Ingestion", desc: "Automated parsing of incoming ServiceNow service request tickets to extract application metadata, claims, and redirect URIs." },
+        { title: "Entra Graph API Automation", desc: "Scripted provisioning of Enterprise Applications, Service Principals, and SSO federation via Python Graph SDK." },
+        { title: "SCIM & Privilege Lifecycle", desc: "Configured automated SCIM user lifecycle sync, Just-In-Time (JIT) provisioning, and CyberArk privileged credential rotation." }
+      ],
+      tech: ["Microsoft Entra ID", "Okta", "CyberArk PAM", "ServiceNow RITM", "Microsoft Graph API", "Python", "PowerShell", "SAML 2.0", "SCIM"]
     },
     {
       id: "fixitnow",
@@ -71,8 +117,7 @@ const PROJECTS_DATA = {
       title: "FixItNow: Civic Grievance & Community Complaint App",
       subtitle: "Flutter · Dart · REST API · Video Evidence · Push Notifications",
       liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/fixitnow-app",
-      subRepos: [],
+      githubUrl: "https://github.com/shivaganesh22/fixit-now",
       whatItHas: "A cross-platform mobile application built in Flutter enabling citizens and communities to report public grievances and infrastructure issues. Users can lodge complaints with photo and video evidence, track resolution progress through a live status pipeline, comment and upvote issues in their locality, and receive instant push notifications as municipal authorities update ticket stages.",
       keyFeatures: [
         { title: "Multimedia Evidence Upload", desc: "Integrated camera and video player allowing citizens to capture and submit verifiable evidence directly with complaint tickets." },
@@ -82,27 +127,6 @@ const PROJECTS_DATA = {
       tech: ["Flutter", "Dart", "REST API", "Video Player", "Push Notifications", "Local Storage", "Cross-Platform Mobile"]
     },
     {
-      id: "aupulse-app",
-      category: "web_mobile",
-      badge: "Computer Vision & Mobile",
-      title: "AUpulse Automated Attendance Management System",
-      subtitle: "Flutter Mobile App + OpenCV CCTV Facial Recognition + Django REST",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/aupulse_app",
-      subRepos: [
-        { label: "Flutter Client", url: "https://github.com/shivaganesh22/aupulse_app" },
-        { label: "Computer Vision Engine", url: "https://github.com/shivaganesh22/aupulse_cv" },
-        { label: "Backend Core", url: "https://github.com/shivaganesh22/aupulse-miniproject" }
-      ],
-      whatItHas: "An end-to-end automated attendance management platform integrated with classroom CCTV cameras and academic timetables. The system matches video streams against enrolled student facial embeddings in real time and automatically records attendance, completely eliminating manual roll-call and proxy attendance.",
-      keyFeatures: [
-        { title: "Real-Time Face Matching", desc: "CCTV facial recognition pipeline matching classroom video feeds against enrolled student biometric profiles." },
-        { title: "Proxy-Proof Attendance", desc: "Tamper-resistant automated logging matched directly against class schedules and room timetables." },
-        { title: "Mobile Student Portal", desc: "Flutter mobile client allowing students and faculty to review real-time presence percentages, analytics, and shortage warnings." }
-      ],
-      tech: ["Flutter / Dart", "OpenCV", "Face Recognition", "Django REST API", "Python", "PostgreSQL"]
-    },
-    {
       id: "applock",
       category: "ai_ml",
       badge: "Biometrics & Hardware Auth",
@@ -110,7 +134,6 @@ const PROJECTS_DATA = {
       subtitle: "MediaPipe 468 Face Landmarks · Hand Gesture Random Forest · WebAuthn / FIDO2",
       liveUrl: null,
       githubUrl: "https://github.com/shivaganesh22/applock",
-      subRepos: [],
       whatItHas: "An advanced multi-modal biometric security gateway providing alternative authentication methods beyond standard passwords. Evaluates 468 3D facial mesh landmarks with an RBF-kernel SVM, classifies 21 hand joint angles and curl gestures via Random Forest, and enforces physical possession through WebAuthn/FIDO2 hardware security keys.",
       keyFeatures: [
         { title: "468 3D Facial Mesh", desc: "Real-time facial geometry extraction via MediaPipe normalized into geometric distance vectors and classified using scikit-learn SVM." },
@@ -118,35 +141,27 @@ const PROJECTS_DATA = {
         { title: "Hardware Security FIDO2", desc: "Cryptographic origin challenge validation enforcing physical possession via WebAuthn security keys." }
       ],
       tech: ["MediaPipe", "Scikit-Learn (SVM & RF)", "WebAuthn / FIDO2", "Flask", "OpenCV", "Python"]
-    },
-    {
-      id: "iam-automation",
-      category: "iam_security",
-      badge: "Enterprise IAM Work (PwC)",
-      title: "Automated Enterprise App Onboarding & IAM Governance",
-      subtitle: "Microsoft Entra ID · Okta · PowerShell / Python · CyberArk PAM",
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/pwc",
-      subRepos: [],
-      whatItHas: "Enterprise automation scripts and toolkits developed at PwC for streamlined application onboarding into Microsoft Entra ID and Okta. Automates Single Sign-On (SSO) configuration, SAML 2.0 and OIDC federation, attribute/claims mapping, SCIM user lifecycle provisioning, and CyberArk privileged account password management.",
-      keyFeatures: [
-        { title: "Automated Onboarding", desc: "Scripted provisioning of Enterprise Applications, Service Principals, OAuth redirect URIs, and claims mappings." },
-        { title: "SSO & Identity Federation", desc: "Configured SAML 2.0 assertions and OIDC ID/Access tokens for seamless, centralized authentication across enterprise apps." },
-        { title: "Privileged Access (PAM)", desc: "Integrated CyberArk Vault, PVWA, CPM automated password rotation, and PSM session recording for privileged infrastructure access." }
-      ],
-      tech: ["Microsoft Entra ID", "Okta", "CyberArk PAM", "PowerShell", "Python", "SAML 2.0", "OAuth 2.0 / OIDC", "SCIM"]
     }
   ],
 
   supporting: [
     {
-      title: "Cinemate: TMDB Movie Discovery Web App",
+      title: "Wardobe: P2P Outfit Rental & Fashion Marketplace",
       category: "web_mobile",
-      badge: "React Web App",
-      desc: "Dynamic movie exploration platform consuming the TMDB API. Features Now Playing, Top Rated, and Upcoming movie feeds, real-time search, movie details, and dark/light theme switching.",
-      tech: ["ReactJS", "Tailwind CSS", "TMDB API", "JavaScript", "Netlify"],
+      badge: "Peer-to-Peer Fashion Platform",
+      desc: "Community clothing rental and wardrobe sharing web application built in Django. Features Razorpay digital payment integration, cryptographic QR codes for garment handover/return authenticity, location-based wardrobe discovery, and user profile management.",
+      tech: ["Django", "Python", "Razorpay API", "QR Cryptography", "Bootstrap", "SQLite"],
       liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/cinemate"
+      githubUrl: "https://github.com/shivaganesh22/wardobe"
+    },
+    {
+      title: "Chart Generator: Interactive Visual Canvas Studio",
+      category: "web_mobile",
+      badge: "React Canvas Builder",
+      desc: "Interactive visual data visualization studio built with React 18, Konva.js, React-Konva, and Recharts. Enables dynamic dataset importing, canvas drawing, and high-resolution export of vector charts and flow diagrams.",
+      tech: ["React 18", "Konva.js", "React-Konva", "Recharts", "Tailwind CSS", "Flowbite"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/chart-generator"
     },
     {
       title: "Ecommerce Platform with QR Fraud Prevention",
@@ -156,15 +171,6 @@ const PROJECTS_DATA = {
       tech: ["Django", "Python", "QR Cryptography", "SQLite", "PythonAnywhere"],
       liveUrl: "https://ecommerce0.pythonanywhere.com",
       githubUrl: "https://github.com/shivaganesh22/ecommerce"
-    },
-    {
-      title: "Blast: High-Throughput Notification Dispatcher",
-      category: "web_mobile",
-      badge: "Node.js Serverless",
-      desc: "Serverless Node.js event gateway proxying high-speed automated notifications and alerts with Bearer token authentication, custom header rotation, and CORS handling.",
-      tech: ["Node.js", "Express", "Axios", "Serverless-HTTP", "CORS"],
-      liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/blast"
     },
     {
       title: "Placement Management System (PMS)",
@@ -185,14 +191,22 @@ const PROJECTS_DATA = {
       githubUrl: "https://github.com/shivaganesh22/amsproject"
     },
     {
-      title: "Price Tracker: Distributed E-Commerce Monitor",
-      category: "web_mobile",
-      badge: "React 18 + Django REST",
-      desc: "Distributed price tracking tool combining a React 18 frontend with a scalable Django REST backend and Firebase integration to monitor product prices and trigger alerts.",
-      tech: ["React 18", "Django REST Framework", "Firebase", "Tailwind CSS"],
+      title: "PwC Enterprise IAM & Zero-Trust MFA Security Portal",
+      category: "iam_security",
+      badge: "Enterprise IAM & MFA",
+      desc: "Enterprise multi-factor authentication and zero-trust access control gateway built with Django 5 and django-allauth. Implements TOTP authenticator app support, FIDO2 / WebAuthn hardware security keys, active session management with remote session revocation (usersessions), Google OAuth 2.0 social federation, Google reCAPTCHA bot defense, and HTTP 429 rate-limiting abuse protection.",
+      tech: ["Django 5", "django-allauth", "TOTP MFA", "FIDO2 / WebAuthn", "Session Security", "reCAPTCHA", "JWT", "OAuth 2.0"],
       liveUrl: null,
-      githubUrl: "https://github.com/shivaganesh22/pricetracker-frontend",
-      backendUrl: "https://github.com/shivaganesh22/pricetracker-backend"
+      githubUrl: "https://github.com/shivaganesh22/pwc"
+    },
+    {
+      title: "Full-Stack Assessment: Django REST API & React Studio",
+      category: "web_mobile",
+      badge: "Full-Stack Evaluation",
+      desc: "Modular full-stack engineering solution coupling a Django REST Framework API engine for real-time calculations and data filtering with a modern React 18 + Vite responsive frontend featuring dynamic product listings, Axios HTTP client, and React Router navigation.",
+      tech: ["Django REST Framework", "React 18", "Vite", "Axios", "React Router", "Python", "JavaScript"],
+      liveUrl: null,
+      githubUrl: "https://github.com/shivaganesh22/21EG112B26"
     },
     {
       title: "Smart Farming Assistant",
@@ -288,7 +302,13 @@ function renderFlagshipProjects() {
             ${p.liveUrl ? `
               <a href="${p.liveUrl}" target="_blank" rel="noopener" class="btn-live-pill" onclick="window.soundEngine?.playClick()">
                 <span class="live-dot"></span>
-                <span>Live Demo ↗</span>
+                <span>${p.liveUrl.includes('rsgmovies.com') ? 'rsgmovies.com ↗' : 'Live App ↗'}</span>
+              </a>
+            ` : ''}
+            ${p.liveBackendUrl ? `
+              <a href="${p.liveBackendUrl}" target="_blank" rel="noopener" class="btn-live-pill backend" onclick="window.soundEngine?.playClick()">
+                <span class="live-dot"></span>
+                <span>API Live ↗</span>
               </a>
             ` : ''}
             ${p.githubUrl ? `
@@ -302,6 +322,14 @@ function renderFlagshipProjects() {
 
         <h3 class="flagship-title">${p.title}</h3>
 
+        ${p.monorepoTag ? `
+          <div style="margin-bottom: 12px;">
+            <span class="mono text-cyan" style="font-size: 0.78rem; background: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.25); padding: 3px 10px; border-radius: var(--radius-sm);">
+              ⚡ ${p.monorepoTag}
+            </span>
+          </div>
+        ` : ''}
+
         <!-- What the Project Has Section -->
         <div class="flagship-what-box">
           <div class="box-section-heading">
@@ -309,21 +337,6 @@ function renderFlagshipProjects() {
           </div>
           <p class="flagship-what-text">${p.whatItHas}</p>
         </div>
-
-        <!-- Sub-repositories (if multi-repo ecosystem) -->
-        ${p.subRepos && p.subRepos.length ? `
-          <div class="sub-repos-strip">
-            <span class="sub-repo-label mono">Ecosystem Repositories:</span>
-            <div class="sub-repo-pills">
-              ${p.subRepos.map(sr => `
-                <a href="${sr.url}" target="_blank" rel="noopener" class="sub-repo-pill" onclick="window.soundEngine?.playClick()">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                  <span>${sr.label}</span>
-                </a>
-              `).join('')}
-            </div>
-          </div>
-        ` : ''}
 
         <!-- Technical Highlights Grid -->
         <div class="flagship-highlights-grid">
@@ -387,11 +400,6 @@ function renderSupportingProjects(filter = 'all', searchQuery = '') {
             <a href="${p.githubUrl}" target="_blank" rel="noopener" class="link-badge-repo" title="View Source on GitHub" onclick="window.soundEngine?.playClick()">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
               GitHub ↗
-            </a>
-          ` : ''}
-          ${p.backendUrl ? `
-            <a href="${p.backendUrl}" target="_blank" rel="noopener" class="link-badge-repo" title="Backend Repository" onclick="window.soundEngine?.playClick()">
-              Backend ↗
             </a>
           ` : ''}
         </div>

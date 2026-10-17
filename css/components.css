@@ -1081,6 +1081,79 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Elevated GitHub Lead Profile Card */
+.hero-github-lead-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-gh-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  padding: 6px 14px 6px 8px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.hero-gh-chip:hover {
+  background: rgba(0, 242, 254, 0.12);
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(0, 242, 254, 0.2);
+}
+
+.gh-avatar-mini {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-cyan);
+}
+
+.gh-info-mini {
+  display: flex;
+  flex-direction: column;
+}
+
+.gh-handle {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.gh-status {
+  font-size: 0.68rem;
+  color: var(--accent-cyan);
+}
+
+.gh-pro-tag {
+  background: linear-gradient(135deg, #ff007f, #7928ca);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+}
+
+.btn-live-pill.backend {
+  background: rgba(0, 242, 254, 0.08);
+  border-color: rgba(0, 242, 254, 0.35);
+  color: var(--accent-cyan);
+}
+
+.btn-live-pill.backend:hover {
+  background: var(--accent-cyan);
+  color: #000;
+}
+
 .hero-social-label {
   font-family: var(--font-mono);
   font-size: 0.76rem;

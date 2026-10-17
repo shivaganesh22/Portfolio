@@ -110,7 +110,16 @@
     <section class="hero-section" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="hero-badge-wrap">
+          <!-- Elevated Top GitHub Profile Bar -->
+          <div class="hero-github-lead-card">
+            <a href="https://github.com/shivaganesh22" target="_blank" rel="noopener" class="hero-gh-chip" onclick="window.soundEngine?.playClick()">
+              <img src="https://avatars.githubusercontent.com/u/71806997?v=4" alt="Dornala Shiva Ganesh" class="gh-avatar-mini" />
+              <div class="gh-info-mini">
+                <span class="gh-handle">github.com/shivaganesh22</span>
+                <span class="gh-status">Public & Monorepo Repositories ↗</span>
+              </div>
+              <span class="gh-pro-tag">PRO</span>
+            </a>
             <div class="status-pill">
               <span class="pulse-dot"></span>
               <span>IAM Associate · PwC Cyber Risk & Regulatory</span>
@@ -227,7 +236,10 @@
                 </div>
                 <div class="identity-meta">
                   <h3>Shiva Ganesh</h3>
-                  <span class="meta-tag">@shivaganesh22 · Pro</span>
+                  <a href="https://github.com/shivaganesh22" target="_blank" rel="noopener" class="meta-tag" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px; color: var(--accent-cyan);" title="View GitHub Profile (@shivaganesh22)" onclick="window.soundEngine?.playClick()">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>@shivaganesh22 · Pro ↗</span>
+                  </a>
                   <span class="meta-loc">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     Hyderabad, India
@@ -313,13 +325,15 @@
               </div>
               <div>
                 <h3 class="skill-category-title">Offensive Security & Pentesting</h3>
-                <span class="mono text-muted" style="font-size: 0.75rem;">// PENETRATION & PROTOCOL AUDITING</span>
+                <span class="mono text-muted" style="font-size: 0.75rem;">// PENETRATION & RAT CREATION / INJECTION</span>
               </div>
             </div>
             <p class="skill-category-desc">
-              Hands-on vulnerability assessment, network penetration, credential auditing, and wireless security analysis conducted in authorized test environments.
+              Android & Windows hacking, Remote Access Trojan (RAT) creation & payload injection, process injection, AMSI & AV evasion, vulnerability exploitation, credential brute-forcing, and wireless network penetration testing in authorized environments.
             </p>
             <div class="skill-tags-cloud">
+              <span class="skill-pill-badge sec">Android & Windows RAT Creation</span>
+              <span class="skill-pill-badge sec">Payload Injection & AV Evasion</span>
               <span class="skill-pill-badge sec">Kali Linux</span>
               <span class="skill-pill-badge sec">Burp Suite (MitM / Tampering)</span>
               <span class="skill-pill-badge sec">Hydra (Brute-Forcing)</span>
@@ -328,7 +342,6 @@
               <span class="skill-pill-badge sec">Aircrack-ng (Handshake / Deauth)</span>
               <span class="skill-pill-badge sec">Metasploit Framework</span>
               <span class="skill-pill-badge sec">Nmap Network Scanning</span>
-              <span class="skill-pill-badge sec">OWASP Top 10 Web Auditing</span>
               <span class="skill-pill-badge sec">Wireshark Packet Analysis</span>
             </div>
           </div>
@@ -366,23 +379,25 @@
                 🛡️
               </div>
               <div>
-                <h3 class="skill-category-title">Enterprise IAM & Privileged Access</h3>
-                <span class="mono text-muted" style="font-size: 0.75rem;">// IDENTITY GOVERNANCE & PAM (PwC)</span>
+                <h3 class="skill-category-title">Enterprise IAM & Active Directory (AD)</h3>
+                <span class="mono text-muted" style="font-size: 0.75rem;">// AD DS, AUDITING & PAM GOVERNANCE (PwC)</span>
               </div>
             </div>
             <p class="skill-category-desc">
-              Production identity lifecycle automation, federated authentication, privileged access vaults, and zero-trust conditional access governance at enterprise scale.
+              On-prem Active Directory Domain Services (AD DS) administration: Users, Groups, OUs, Domain Controller (DC) promotion, and Group Policy Objects (GPO partial). Enterprise event auditing with Quest Change Auditor and Splunk SIEM log indexing. Microsoft Entra ID and Okta cloud federation, SCIM user provisioning, and CyberArk PAM privileged secret management.
             </p>
             <div class="skill-tags-cloud">
+              <span class="skill-pill-badge iam">Active Directory (AD DS)</span>
+              <span class="skill-pill-badge iam">Users, Groups & OUs</span>
+              <span class="skill-pill-badge iam">DC Promotion & DNS</span>
+              <span class="skill-pill-badge iam">Group Policy Objects (GPO partial)</span>
+              <span class="skill-pill-badge iam">Change Auditor Logs</span>
+              <span class="skill-pill-badge iam">Splunk SIEM (Log Indexing)</span>
               <span class="skill-pill-badge iam">Microsoft Entra ID (Azure AD)</span>
               <span class="skill-pill-badge iam">Okta Identity Cloud</span>
               <span class="skill-pill-badge iam">CyberArk PAM (Vault, PVWA, CPM, PSM)</span>
-              <span class="skill-pill-badge iam">CyberArk CCP Secret Injection</span>
               <span class="skill-pill-badge iam">SAML 2.0 & OIDC Federation</span>
-              <span class="skill-pill-badge iam">OAuth 2.0 Token Architecture</span>
               <span class="skill-pill-badge iam">SCIM Automated Provisioning & JIT</span>
-              <span class="skill-pill-badge iam">Zero-Trust Conditional Access</span>
-              <span class="skill-pill-badge iam">Role-Based Access Control (RBAC)</span>
               <span class="skill-pill-badge iam">PowerShell & Python IAM Automation</span>
             </div>
           </div>
@@ -544,16 +559,23 @@
                 <span class="timeline-badge-date">August 2025 – Present</span>
               </div>
               <ul class="timeline-body-list">
+                <li>Administered on-premises <strong>Active Directory Domain Services (AD DS)</strong>: managed Users, Security Groups, and Organizational Units (OUs); performed <strong>Domain Controller (DC) promotion</strong> and DNS configuration.</li>
+                <li>Configured and rolled out partial <strong>Group Policy Objects (GPOs)</strong> for workstation security baselines and user environment governance.</li>
+                <li>Conducted enterprise authentication and security log auditing using Quest <strong>Change Auditor</strong> (real-time AD change tracking) and <strong>Splunk SIEM</strong> (log indexing, search queries, and incident investigation).</li>
                 <li>Managed enterprise user identities, security groups, and RBAC across <strong>Microsoft Entra ID</strong> and <strong>Okta</strong>.</li>
-                <li>Engineered automated scripts to streamline enterprise application onboarding into Entra ID, including SSO integration, admin roles, and Conditional Access policies based on input parameters.</li>
-                <li>Configured Conditional Access policies in Entra ID covering MFA enforcement, sign-in risk triggers, location-based fencing, and device compliance, as well as Okta Sign-On Policies.</li>
-                <li>Integrated enterprise applications utilizing <strong>SAML 2.0</strong> and <strong>OIDC / OAuth 2.0</strong> with SCIM / Just-in-Time (JIT) lifecycle provisioning.</li>
+                <li>Engineered automated onboarding toolkits (<code>app_onboarding</code>) parsing ServiceNow RITM tickets to provision enterprise applications into Entra ID via Graph API, configuring SAML 2.0 / OIDC single sign-on, attribute claims mappings, and SCIM lifecycle synchronization.</li>
+                <li>Configured Conditional Access policies in Entra ID covering MFA enforcement, sign-in risk triggers, location-based fencing, and device compliance.</li>
               </ul>
               <div class="timeline-tools-strip">
+                <span class="tech-chip">Active Directory (AD DS)</span>
+                <span class="tech-chip">Users / Groups / OUs</span>
+                <span class="tech-chip">DC Promotion</span>
+                <span class="tech-chip">GPO (partial)</span>
+                <span class="tech-chip">Change Auditor</span>
+                <span class="tech-chip">Splunk SIEM</span>
                 <span class="tech-chip">Microsoft Entra ID</span>
                 <span class="tech-chip">Okta</span>
                 <span class="tech-chip">SAML 2.0</span>
-                <span class="tech-chip">OIDC / OAuth</span>
                 <span class="tech-chip">SCIM / JIT</span>
                 <span class="tech-chip">PowerShell</span>
               </div>
