@@ -260,13 +260,13 @@ const PROJECTS_DATA = {
   ]
 };
 
-// Render Flagship Projects (TOP 5 full-screen showcase cards)
+// Render Flagship Projects (TOP 5 showcase cards with mobile half-card tap-to-expand)
 function renderFlagshipProjects() {
   const container = document.getElementById('flagship-list-container');
   if (!container) return;
 
   container.innerHTML = PROJECTS_DATA.flagships.map(p => `
-    <article class="flagship-card" data-tilt id="card-${p.id}">
+    <article class="flagship-card" data-tilt id="card-${p.id}" onclick="handleFlagshipCardClick(this, event)">
       <div class="flagship-card-inner">
         <!-- Top Header Bar -->
         <div class="flagship-top-header">
@@ -304,27 +304,66 @@ function renderFlagshipProjects() {
           <p class="flagship-what-text">${p.whatItHas}</p>
         </div>
 
-        <!-- Technical Highlights Grid -->
-        <div class="flagship-highlights-grid">
-          ${p.keyFeatures.map(h => `
-            <div class="highlight-box">
-              <div class="highlight-title">${h.title}</div>
-              <div class="highlight-desc">${h.desc}</div>
-            </div>
-          `).join('')}
-        </div>
+        <!-- Collapsible Content for Mobile (Highlights & Tech Stack) -->
+        <div class="flagship-collapsible-content">
+          <!-- Technical Highlights Grid -->
+          <div class="flagship-highlights-grid">
+            ${p.keyFeatures.map(h => `
+              <div class="highlight-box">
+                <div class="highlight-title">${h.title}</div>
+                <div class="highlight-desc">${h.desc}</div>
+              </div>
+            `).join('')}
+          </div>
 
-        <!-- Tech Stack Used -->
-        <div class="flagship-tech-block">
-          <span class="tech-block-title mono">// TECH STACK:</span>
-          <div class="flagship-tags-wrap">
-            ${p.tech.map(t => `<span class="tech-chip">#${t}</span>`).join('')}
+          <!-- Tech Stack Used -->
+          <div class="flagship-tech-block">
+            <span class="tech-block-title mono">// TECH STACK:</span>
+            <div class="flagship-tags-wrap">
+              ${p.tech.map(t => `<span class="tech-chip">#${t}</span>`).join('')}
+            </div>
           </div>
         </div>
+
+        <!-- Mobile Expand/Collapse Action (visible only on mobile screens <= 768px) -->
+        <button class="flagship-mobile-expand-btn" type="button" aria-expanded="false" onclick="toggleFlagshipCard(this, event)">
+          <span class="expand-btn-text">Tap to Read Full Architecture & Tech Stack</span>
+          <svg class="expand-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </div>
     </article>
   `).join('');
 }
+
+// Toggle Flagship card expansion on mobile
+window.toggleFlagshipCard = function(btn, event) {
+  if (event) {
+    event.stopPropagation();
+  }
+  window.soundEngine?.playClick();
+  const card = btn.closest('.flagship-card');
+  if (!card) return;
+
+  const isExpanded = card.classList.toggle('is-expanded');
+  btn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+  const textSpan = btn.querySelector('.expand-btn-text');
+  if (textSpan) {
+    textSpan.textContent = isExpanded ? 'Collapse Architecture & Details' : 'Tap to Read Full Architecture & Tech Stack';
+  }
+};
+
+// Handle tap anywhere on flagship card on mobile
+window.handleFlagshipCardClick = function(card, event) {
+  if (window.innerWidth > 768) return;
+  // If user tapped a link, button, or inside a link, allow native action
+  if (event.target.closest('a') || event.target.closest('.flagship-mobile-expand-btn')) {
+    return;
+  }
+  const btn = card.querySelector('.flagship-mobile-expand-btn');
+  if (btn) {
+    window.toggleFlagshipCard(btn, event);
+  }
+};
 
 // Render Supporting Projects Grid with Live Links & Repo Links
 function renderSupportingProjects(filter = 'all', searchQuery = '') {

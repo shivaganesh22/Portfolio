@@ -222,6 +222,15 @@
   margin-top: auto;
 }
 
+/* Flagship Collapsible Architecture (Desktop default is fully visible) */
+.flagship-collapsible-content {
+  display: block;
+}
+
+.flagship-mobile-expand-btn {
+  display: none;
+}
+
 /* ==========================================================================
    SUPPORTING PROJECTS & FILTER SYSTEM
    ========================================================================== */

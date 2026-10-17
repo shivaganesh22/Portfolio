@@ -231,6 +231,7 @@ function init3DTilt() {
 
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
+      if (window.innerWidth <= 768) return;
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;

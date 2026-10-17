@@ -219,21 +219,34 @@ p, span, a, h1, h2, h3, h4, h5, h6,
     margin-top: 3px;
   }
 
-  /* Flagship Cards */
+  /* Flagship Cards - Mobile Half-Card with Tap-to-Expand */
   .flagship-list {
-    gap: 28px;
+    gap: 20px;
+  }
+
+  .flagship-card {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+  }
+
+  .flagship-card a, .flagship-card button {
+    user-select: auto;
+    -webkit-user-select: auto;
   }
 
   .flagship-card-inner {
-    padding: 22px 18px;
+    padding: 20px 16px;
   }
 
   .flagship-top-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    margin-bottom: 14px;
-    padding-bottom: 14px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
   }
 
   .flagship-badge-group {
@@ -268,52 +281,135 @@ p, span, a, h1, h2, h3, h4, h5, h6,
   }
 
   .flagship-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     line-height: 1.32;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .flagship-what-box {
-    padding: 16px 14px;
-    margin-bottom: 16px;
+    padding: 14px 12px;
+    margin-bottom: 0;
+    border-radius: var(--radius-md);
+    position: relative;
+  }
+
+  /* Half-card preview clamp when collapsed on mobile */
+  .flagship-card:not(.is-expanded) .flagship-what-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .flagship-card.is-expanded .flagship-what-text {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
   }
 
   .flagship-what-text {
-    font-size: 0.92rem;
-    line-height: 1.62;
+    font-size: 0.88rem;
+    line-height: 1.58;
+  }
+
+  /* Deep architecture highlights & tech stack collapsible */
+  .flagship-collapsible-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin-top 0.35s ease;
+    margin-top: 0;
+  }
+
+  .flagship-card.is-expanded .flagship-collapsible-content {
+    max-height: 2500px;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+    margin-top: 14px;
   }
 
   .flagship-highlights-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 14px;
   }
 
   .highlight-box {
-    padding: 14px 12px;
+    padding: 12px 10px;
   }
 
   .highlight-title {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     line-height: 1.35;
   }
 
   .highlight-desc {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.48;
   }
 
   .flagship-tech-block {
-    padding-top: 14px;
+    padding-top: 12px;
   }
 
   .tech-block-title {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
   }
 
   .tech-chip {
     font-size: 0.72rem;
     padding: 3px 8px;
+  }
+
+  /* Mobile Expand Button */
+  .flagship-mobile-expand-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px dashed rgba(0, 242, 254, 0.38);
+    border-radius: var(--radius-md);
+    color: var(--accent-cyan);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .flagship-mobile-expand-btn:active {
+    background: rgba(0, 242, 254, 0.22);
+    border-color: var(--accent-cyan);
+    transform: scale(0.99);
+  }
+
+  .expand-btn-icon {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .flagship-card.is-expanded .expand-btn-icon {
+    transform: rotate(180deg);
+  }
+
+  .flagship-card.is-expanded .flagship-mobile-expand-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-secondary);
+  }
+
+  .flagship-card.is-expanded {
+    border-color: rgba(0, 242, 254, 0.4);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.14);
   }
 
   /* Skills Grid */
